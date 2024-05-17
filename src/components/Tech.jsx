@@ -10,9 +10,9 @@ function Tech() {
                 Tech Stack
             </p>
             <div className="grid place-content-center gap-3 place-items-center sm:grid-cols-3">
-            <Image src={tailwindImage} width={500} height={500} className="w-60"/>
-            <Image src={nextImage} width={500} height={500} className="w-36"/>
-            <Image src={reactImage} width={500} height={500} className="w-60"/>
+            <Image alt="" src={tailwindImage} width={500} height={500} className="w-60"/>
+            <Image alt="" src={nextImage} width={500} height={500} className="w-36"/>
+            <Image alt="" src={reactImage} width={500} height={500} className="w-60"/>
             
             </div>
         </div>

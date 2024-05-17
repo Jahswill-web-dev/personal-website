@@ -16,7 +16,7 @@ function Nav() {
       <div className="flex justify-between items-center ">
         {/* logo  */}
         <div className="flex justify-between items-center relative z-10">
-          <Image src={logo} width={70} height={70} className="w-[5rem]" />
+          <Image src={logo} width={70} height={70} alt="logo" className="w-[5rem]" />
         </div>
         {/* Navigation links desktop */}
         <div className="hidden md:flex md:gap-4">

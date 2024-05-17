@@ -15,9 +15,9 @@ function Contact() {
           Lets create a something together
         </h3>
         <p className="text-secondary text-xl sm:text-center">
-          The idea of offering my expertise to your team excites me. Let's get
+          {`The idea of offering my expertise to your team excites me. Let's get
           in touch if you're looking for a committed frontend developer who
-          combines technical mastery with a passion for innovation!
+          combines technical mastery with a passion for innovation!`}
         </p>
         <Link href="mailto:onuegbujahswill@gmail.com" className="text-xl text-secondary border-4 border-primary px-4 py-2">
           Send mail
