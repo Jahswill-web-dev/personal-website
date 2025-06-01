@@ -189,7 +189,7 @@ const Portfolio = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-                Hi, I'm{" "}
+                {"Hi, I'm "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
                   Jahswill
                 </span>
