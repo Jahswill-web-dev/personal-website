@@ -4,7 +4,6 @@ import {
   Mail,
   Phone,
   MapPin,
-  Github,
   ExternalLink,
   ChevronDown,
   Menu,
@@ -13,8 +12,14 @@ import {
   Briefcase,
   User,
   FolderOpen,
+  Newspaper,
 } from "lucide-react";
-
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import Image from "next/image";
+import mypfp from "../../public/images/about.png"; // Adjust the path as necessary
+import Link from "next/link";
+import { BlogSection } from "../components/BlogSection";
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState("about");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,6 +41,9 @@ const Portfolio = () => {
       setIsMenuOpen(false);
     }
   };
+  
+
+
   // Content of the portfolio page
   const skills = [
     "HTML",
@@ -45,6 +53,10 @@ const Portfolio = () => {
     "Next.js",
     "TailwindCSS",
     "TypeScript",
+    "Mongodb",
+    "Node.js",
+    "Express.js",
+    "Redux",
   ];
 
   const coreSkills = [
@@ -60,6 +72,7 @@ const Portfolio = () => {
     {
       title: "Frontend Developer",
       company: "Aurify AI",
+      url: "https://aurifyai.xyz/",
       period: "Recent",
       description:
         "Led UI design and frontend development using Next.js (React), Redux, Tailwind CSS, and various other development libraries.",
@@ -73,7 +86,8 @@ const Portfolio = () => {
     {
       title: "Fullstack Web Developer & Designer",
       company: "Gold Dust AI (Freelance)",
-      period: "2022-2024",
+      url: "https://golddustai.vercel.app/",
+      period: "2022",
       description:
         "Designed and developed a responsive, modern website for GoldDustAI, an AI consulting firm.",
       highlights: [
@@ -86,6 +100,7 @@ const Portfolio = () => {
     {
       title: "Frontend Developer",
       company: "J.J WILLMIN",
+      url: "https://www.jjwillminmalls.com/",
       period: "2022-2024",
       description:
         "Designed and developed landing pages for marketing campaigns with conversion-focused UI.",
@@ -98,11 +113,14 @@ const Portfolio = () => {
     },
   ];
 
+
+
   const projects = [
     {
-      title: "Personal Portfolio",
-      url: "https://jahswill.vercel.app/",
-      description: "Personal portfolio website showcasing projects and skills",
+      title: "Inkwell",
+      url: "https://useinkwell.vercel.app/",
+      description:
+        "An AI-powered writing assistant that helps users improve their writing skills",
     },
     {
       title: "Gold Dust AI",
@@ -135,6 +153,7 @@ const Portfolio = () => {
                 { id: "experience", label: "Experience", icon: Briefcase },
                 { id: "skills", label: "Skills", icon: Code },
                 { id: "projects", label: "Projects", icon: FolderOpen },
+                { id: "blogs", label: "Blogs", icon: Newspaper },
               ].map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
@@ -168,6 +187,7 @@ const Portfolio = () => {
                 { id: "experience", label: "Experience", icon: Briefcase },
                 { id: "skills", label: "Skills", icon: Code },
                 { id: "projects", label: "Projects", icon: FolderOpen },
+                { id: "blogs", label: "Blogs", icon: Newspaper },
               ].map(({ id, label, icon: Icon }) => (
                 <button
                   key={id}
@@ -213,15 +233,35 @@ const Portfolio = () => {
                   <Mail size={20} />
                   <span>Get In Touch</span>
                 </a>
-                <a
-                  href="https://jahswill.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-6 py-3 rounded-lg transition-colors"
-                >
-                  <ExternalLink size={20} />
-                  <span>View Live Site</span>
-                </a>
+                <div className="flex flex-row gap-7 md:gap-5 items-center justify-center">
+                  {/* Github */}
+                  <a
+                    href="https://github.com/Jahswill-web-dev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" text-purple-400 hover:text-white py-3 transition-colors"
+                  >
+                    <FaGithub size={25} />
+                  </a>
+                  {/* linkedIn */}
+                  <a
+                    href="https://www.linkedin.com/in/jahswillc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" text-purple-400 hover:text-white py-3 transition-colors"
+                  >
+                    <FaLinkedin size={25} />
+                  </a>
+                  {/* Twitter */}
+                  <a
+                    href="https://x.com/Jahswille1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className=" text-purple-400 hover:text-white py-3 transition-colors"
+                  >
+                    <BsTwitterX size={25} />
+                  </a>
+                </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 text-gray-300">
@@ -239,14 +279,17 @@ const Portfolio = () => {
                 </div>
               </div>
             </div>
-
+            {/* Pfp */}
             <div className="relative">
               <div className="w-80 h-80 mx-auto rounded-full bg-gradient-to-r from-purple-400 to-pink-400 p-1">
-                <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                  <div className="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                    JO
-                  </div>
-                </div>
+                {/* <div className=""> */}
+                <Image
+                  objectFit
+                  src={mypfp}
+                  alt="A picture of Jahswill"
+                  className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center"
+                />
+                {/* </div> */}
               </div>
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-purple-600/20 rounded-full blur-xl"></div>
               <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-pink-600/20 rounded-full blur-xl"></div>
@@ -269,10 +312,22 @@ const Portfolio = () => {
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-white">
-                      {exp.title}
-                    </h3>
-                    <p className="text-purple-400 text-lg">{exp.company}</p>
+                    <span className="flex items-center space-x-2 mb-2">
+                      <Briefcase size={20} className="text-purple-400" />
+                      <h3 className="text-xl font-semibold text-white">
+                        {exp.title}
+                      </h3>
+                    </span>
+
+                    <Link
+                      href={exp.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors mb-2"
+                    >
+                      <p className="text-purple-400 text-lg">{exp.company}</p>
+                      <ExternalLink size={16} />
+                    </Link>
                   </div>
                   <span className="text-gray-400 text-sm lg:text-base">
                     {exp.period}
@@ -346,6 +401,9 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+
+      {/* Blog */}
+      <BlogSection />
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
