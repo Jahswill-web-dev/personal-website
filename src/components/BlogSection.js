@@ -2,7 +2,8 @@
 import { getPosts } from "../app/lib/strapi/getPosts";
 import { ExternalLink, Calendar, Clock, Tag } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import dayjs from 'dayjs';
+import dayjs from "dayjs";
+import Link from "next/link";
 
 export const BlogSection = () => {
   const blogPosts = [
@@ -109,7 +110,9 @@ export const BlogSection = () => {
                   >
                     <div className="flex items-center text-sm text-gray-400 mb-3">
                       <Calendar size={14} className="mr-2" />
-                      <span>{dayjs(post.updatedAt).format('MMMM D, YYYY')}</span>
+                      <span>
+                        {dayjs(post.updatedAt).format("MMMM D, YYYY")}
+                      </span>
                       <span className="mx-2">•</span>
                       <Clock size={14} className="mr-2" />
                       {/* <span>{post.readTime}</span> */}
@@ -135,10 +138,14 @@ export const BlogSection = () => {
                       ))}
                     </div>
 
-                    <button className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                    <Link
+                      href={`/blogs/${post.slug}`}
+                      key={index}
+                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
                       <span>Read More</span>
                       <ExternalLink size={16} className="ml-2" />
-                    </button>
+                    </Link>
                   </article>
                 ))}
           </div>
@@ -151,17 +158,17 @@ export const BlogSection = () => {
             Recent Posts
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {blogPosts.slice(2).map((post, index) => (
+            {posts.map((post, index) => (
               <article
                 key={index}
-                className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-5 border border-slate-700/30 hover:border-purple-500/30 transition-all hover:bg-slate-800/50 group"
+                className=" bg-slate-800/30 backdrop-blur-sm rounded-lg p-5 border border-slate-700/30 hover:border-purple-500/30 transition-all hover:bg-slate-800/50 group"
               >
                 <div className="flex items-center text-xs text-gray-500 mb-2">
                   <Calendar size={12} className="mr-1" />
-                  <span>{post.date}</span>
+                  <span> {dayjs(post.updatedAt).format("MMMM D, YYYY")}</span>
                   <span className="mx-2">•</span>
                   <Clock size={12} className="mr-1" />
-                  <span>{post.readTime}</span>
+                  {/* <span>{post.readTime}</span> */}
                 </div>
 
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors line-clamp-2">
@@ -169,7 +176,7 @@ export const BlogSection = () => {
                 </h4>
 
                 <p className="text-gray-400 text-sm mb-3 line-clamp-3">
-                  {post.excerpt}
+                  {post.description}
                 </p>
 
                 <div className="flex flex-wrap gap-1 mb-3">
@@ -178,7 +185,7 @@ export const BlogSection = () => {
                       key={tagIndex}
                       className="inline-flex items-center px-2 py-0.5 bg-purple-900/20 text-purple-400 text-xs rounded-full"
                     >
-                      {tag}
+                      {tag.name}
                     </span>
                   ))}
                   {post.tags.length > 2 && (
@@ -188,18 +195,24 @@ export const BlogSection = () => {
                   )}
                 </div>
 
-                <button className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+                <Link
+                  href={`/blogs/${post.slug}`}
+                  className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
+                >
                   Read More →
-                </button>
+                </Link>
               </article>
             ))}
           </div>
         </div>
 
         <div className="text-center mt-12">
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg transition-colors">
+          <Link
+            href="/blogs"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg transition-colors"
+          >
             View All Posts
-          </button>
+          </Link>
         </div>
       </div>
     </section>
