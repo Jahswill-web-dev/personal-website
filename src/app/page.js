@@ -271,7 +271,7 @@ const Portfolio = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone size={18} className="text-purple-400" />
-                  <span>+356 9998 99225</span>
+                  <span>+356 9998 9225</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin size={18} className="text-purple-400" />
