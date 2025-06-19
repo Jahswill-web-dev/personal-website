@@ -42,8 +42,8 @@ export default function PageNotFound() {
                   Looks like this page went on vacation! 🏖️
                 </p>
                 <p className="text-white">
-                  Don't worry though - even the best developers encounter 404s. 
-                  The URL might have changed, or maybe you're exploring uncharted territory! 🗺️
+                  {`Don't worry though - even the best developers encounter 404s. 
+                  The URL might have changed, or maybe you're exploring uncharted territory! 🗺️`}
                 </p>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function PageNotFound() {
                 <span className="font-mono bg-gray-100 px-2 py-1 rounded text-xs mr-2">
                   console.log()
                 </span>
-                "If you think this is a bug, feel free to let me know! 🐛"
+               {`"If you think this is a bug, feel free to let me know! 🐛"`}
               </p>
             </div>
           </div>

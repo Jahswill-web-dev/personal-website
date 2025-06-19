@@ -130,7 +130,7 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts &&
               blogPosts.map((post, index) => (
-                <Link href={`/blogs/${post.slug}`}>
+                <Link href={`/blogs/${post.slug}`} key={index}>
                   <article
                     key={index}
                     className="bg-slate-800/30 backdrop-blur-sm rounded-lg p-5 border border-slate-700/30 hover:border-purple-500/30 transition-all hover:bg-slate-800/50 group
