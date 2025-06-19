@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const response = await axios.get(
-    "http://localhost:1337/api/articles?populate=*"
+    "https://personal-blog-q8p4.onrender.com/api/articles?populate=*"
   );
   const posts = response.data.data;
   const post = posts.find((post) => post.slug === params.slug);
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   const response = await axios.get(
-    "http://localhost:1337/api/articles?populate=*"
+    "https://personal-blog-q8p4.onrender.com/api/articles?populate=*"
   );
   const posts = response.data.data;
   return posts.map((post) => ({
@@ -38,7 +38,7 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const response = await axios.get(
-    `http://localhost:1337/api/articles?filters[slug][$eq]=${params.slug}&populate=*`
+    `https://personal-blog-q8p4.onrender.com/api/articles?filters[slug][$eq]=${params.slug}&populate=*`
   );
   const post = response.data.data[0];
 
