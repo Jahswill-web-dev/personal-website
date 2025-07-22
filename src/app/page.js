@@ -41,8 +41,6 @@ const Portfolio = () => {
       setIsMenuOpen(false);
     }
   };
-  
-
 
   // Content of the portfolio page
   const skills = [
@@ -113,9 +111,28 @@ const Portfolio = () => {
     },
   ];
 
-
-
   const projects = [
+    {
+      title: "Airbnb Landing page clone",
+      url: "https://airbnbclone-olive.vercel.app/",
+      description: "Using Tailwindcss and Next.js to replicate Airbnb landing page",
+    },
+    {
+      title: "ClipBoard landing page",
+      url: "https://jahswill-web-dev.github.io/clipboard-landing-page/",
+      description: "Converted Figma designs to pixel-perfect HTML/CSS",
+    },
+    {
+      title: "Sinnyside landing page",
+      url: "https://jahswill-web-dev.github.io/sunnyside-landing-page/",
+      description:
+        "A modern website built following the figma design in detail using HTML and CSS",
+    },
+    {
+      title: "Huddle landing page",
+      url: "https://jahswill-web-dev.github.io/huddle-landing-page/",
+      description: "A modern website built following the exact figma design",
+    },
     {
       title: "Inkwell",
       url: "https://useinkwell.vercel.app/",
