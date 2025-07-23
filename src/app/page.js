@@ -115,7 +115,8 @@ const Portfolio = () => {
     {
       title: "Airbnb Landing page clone",
       url: "https://airbnbclone-olive.vercel.app/",
-      description: "Using Tailwindcss and Next.js to replicate Airbnb landing page",
+      description:
+        "Using Tailwindcss and Next.js to replicate Airbnb landing page",
     },
     {
       title: "ClipBoard landing page",
@@ -418,10 +419,6 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
-
-      {/* Blog */}
-      <BlogSection />
-
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -452,6 +449,8 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+      {/* Blog */}
+      <BlogSection />
 
       {/* Footer */}
       <footer className="py-12 px-4 sm:px-6 lg:px-8 border-t border-slate-700/50">
