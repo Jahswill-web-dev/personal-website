@@ -70,7 +70,7 @@ const Portfolio = () => {
     {
       title: "Frontend Developer",
       company: "Aurify AI",
-      url: "https://aurifyai.xyz/",
+      url: "https://aurifyai.vercel.app",
       period: "Recent",
       description:
         "Led UI design and frontend development using Next.js (React), Redux, Tailwind CSS, and various other development libraries.",
