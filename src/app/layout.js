@@ -5,9 +5,11 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jahswill's Portfolio",
-  keywords: "Portfolio, Jahswill, Web Developer, Software Engineer, Next.js, React",
-  description: "Welcome to Jahswill's Portfolio - showcasing my work as a Web Developer and Software Engineer.",
+  title: "Jahswill Onuegbu | Full-Stack Developer",
+  keywords:
+    "Jahswill Onuegbu, Full-Stack Developer, AI Integration, SaaS Developer, Laravel, Next.js, React, TypeScript",
+  description:
+    "Portfolio for Jahswill Onuegbu, a full-stack developer building AI-powered SaaS products with React, Next.js, Node.js, TypeScript, Laravel, and Inertia.js.",
 };
 
 export default function RootLayout({ children }) {

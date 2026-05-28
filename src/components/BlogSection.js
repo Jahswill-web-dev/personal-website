@@ -1,217 +1,127 @@
-// import { getPosts } from "@/app/lib/strapi/getPosts";
 import { getPosts } from "../app/lib/strapi/getPosts";
-import { ExternalLink, Calendar, Clock, Tag } from "lucide-react";
+import { ArrowRight, Calendar, Clock, ExternalLink, Tag } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import Link from "next/link";
 
+const fallbackPosts = [
+  {
+    title: "Building AI features that fail gracefully",
+    description:
+      "Notes on structured output, validation, fallback services, and keeping product flows usable when an LLM response is incomplete.",
+    updatedAt: "2026-05-01",
+    slug: "building-ai-features-that-fail-gracefully",
+    tags: [{ name: "AI" }, { name: "Architecture" }],
+  },
+  {
+    title: "What I learned shipping Laravel and Inertia products",
+    description:
+      "A practical look at queues, tests, frontend boundaries, and the small decisions that make full-stack products easier to maintain.",
+    updatedAt: "2026-04-18",
+    slug: "shipping-laravel-inertia-products",
+    tags: [{ name: "Laravel" }, { name: "Inertia" }],
+  },
+  {
+    title: "Frontend performance for content-heavy products",
+    description:
+      "How code splitting, lazy loading, and careful state boundaries can make AI and EdTech interfaces feel faster.",
+    updatedAt: "2026-03-22",
+    slug: "frontend-performance-content-heavy-products",
+    tags: [{ name: "Frontend" }, { name: "Performance" }],
+  },
+];
+
 export const BlogSection = () => {
-  const blogPosts = [
-    {
-      title: "Building Responsive Layouts with CSS Grid and Flexbox",
-      excerpt:
-        "Master the art of creating flexible, responsive layouts by combining CSS Grid and Flexbox. Learn when to use each technique and how they complement each other in modern web design.",
-      date: "March 15, 2025",
-      readTime: "8 min read",
-      tags: ["CSS", "Responsive Design", "Frontend"],
-      featured: true,
-    },
-    {
-      title: "Next.js 15: App Router Deep Dive",
-      excerpt:
-        "Explore the powerful App Router in Next.js 15 and learn how to build scalable applications with server components, streaming, and improved performance optimization techniques.",
-      date: "March 10, 2025",
-      readTime: "12 min read",
-      tags: ["Next.js", "React", "Performance"],
-      featured: true,
-    },
-    {
-      title: "Optimizing React Performance: Beyond Memo and useCallback",
-      excerpt:
-        "Discover advanced React optimization techniques including component splitting, lazy loading, and virtual scrolling to build lightning-fast user interfaces.",
-      date: "March 5, 2025",
-      readTime: "10 min read",
-      tags: ["React", "Performance", "JavaScript"],
-      featured: false,
-    },
-    {
-      title: "TailwindCSS Custom Utilities and Component Patterns",
-      excerpt:
-        "Learn how to extend TailwindCSS with custom utilities, create reusable component patterns, and maintain design consistency across large-scale applications.",
-      date: "February 28, 2025",
-      readTime: "6 min read",
-      tags: ["TailwindCSS", "CSS", "Design Systems"],
-      featured: true,
-    },
-    {
-      title: "TypeScript Best Practices for Frontend Development",
-      excerpt:
-        "Essential TypeScript patterns and practices for building robust frontend applications. From basic types to advanced generics and utility types.",
-      date: "February 22, 2025",
-      readTime: "15 min read",
-      tags: ["TypeScript", "JavaScript", "Best Practices"],
-      featured: false,
-    },
-    {
-      title: "API Integration Strategies in Modern Frontend Apps",
-      excerpt:
-        "Compare different approaches to API integration including REST, GraphQL, and modern tools like React Query and SWR for efficient data fetching.",
-      date: "February 18, 2025",
-      readTime: "9 min read",
-      tags: ["API", "React Query", "Data Fetching"],
-      featured: true,
-    },
-  ];
   const [posts, setPosts] = useState([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
     const fetchPosts = async () => {
       try {
         const response = await getPosts();
-        setPosts(response.data.data);
+        const remotePosts = response?.data?.data;
+        setPosts(Array.isArray(remotePosts) && remotePosts.length > 0 ? remotePosts : fallbackPosts);
       } catch (error) {
-        console.error("Error fetching posts:", error);
+        setPosts(fallbackPosts);
+      } finally {
+        setHasLoaded(true);
       }
     };
 
     fetchPosts();
   }, []);
-  useEffect(() => {
-    console.log("Blog posts:", posts);
-  }, [posts]);
+
+  const visiblePosts = posts.slice(0, 3);
 
   return (
-    <section id="blogs" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Featured Blog Posts
-          </h2>
-          <p className="text-gray-400 text-lg">
-            Sharing insights and experiences in web development
+    <section id="blogs" className="bg-stone-50 px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+          <div>
+            <p className="text-sm font-semibold uppercase text-teal-900">Writing</p>
+            <h2 className="mt-2 text-4xl font-semibold text-zinc-950">Notes from building.</h2>
+          </div>
+          <p className="max-w-xl text-base leading-7 text-zinc-600">
+            Practical thoughts on full-stack development, AI product architecture, and frontend craft.
           </p>
         </div>
 
-        {/* Featured Posts */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full mr-3"></span>
-            Featured Articles
-          </h3>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {posts &&
-              posts
-                // .filter((post) => post.featured)
-                // .slice(0, 2)
-                .map((post, index) => (
-                  <article
-                    key={index}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all hover:transform hover:scale-[1.02] group"
-                  >
-                    <div className="flex items-center text-sm text-gray-400 mb-3">
-                      <Calendar size={14} className="mr-2" />
-                      <span>
-                        {dayjs(post.updatedAt).format("MMMM D, YYYY")}
-                      </span>
-                      <span className="mx-2">•</span>
-                      <Clock size={14} className="mr-2" />
-                      {/* <span>{post.readTime}</span> */}
-                    </div>
-
-                    <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                      {post.title}
-                    </h4>
-
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {post.description}
-                    </p>
-
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="inline-flex items-center px-2 py-1 bg-purple-900/30 text-purple-300 text-xs rounded-full border border-purple-700/30"
-                        >
-                          <Tag size={10} className="mr-1" />
-                          {tag.name}
-                        </span>
-                      ))}
-                    </div>
-
-                    <Link
-                      href={`/blogs/${post.slug}`}
-                      key={index}
-                      className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors"
-                    >
-                      <span>Read More</span>
-                      <ExternalLink size={16} className="ml-2" />
-                    </Link>
-                  </article>
-                ))}
+        {!hasLoaded ? (
+          <div className="grid gap-4 md:grid-cols-3">
+            {[1, 2, 3].map((item) => (
+              <div key={item} className="h-64 animate-pulse rounded-md border border-zinc-200 bg-white shadow-sm" />
+            ))}
           </div>
-        </div>
+        ) : (
+          <div className="grid gap-4 md:grid-cols-3">
+            {visiblePosts.map((post) => (
+              <article key={post.slug || post.title} className="flex min-h-[280px] flex-col justify-between rounded-md border border-zinc-200 bg-white p-5 shadow-sm">
+                <div>
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-medium uppercase text-zinc-400">
+                    <span className="inline-flex items-center gap-1">
+                      <Calendar size={13} />
+                      {dayjs(post.updatedAt).format("MMM D, YYYY")}
+                    </span>
+                    <span className="inline-flex items-center gap-1">
+                      <Clock size={13} />
+                      5 min read
+                    </span>
+                  </div>
 
-        {/* Recent Posts */}
-        <div>
-          <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
-            <span className="w-2 h-8 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full mr-3"></span>
-            Recent Posts
-          </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post, index) => (
-              <article
-                key={index}
-                className=" bg-slate-800/30 backdrop-blur-sm rounded-lg p-5 border border-slate-700/30 hover:border-purple-500/30 transition-all hover:bg-slate-800/50 group"
-              >
-                <div className="flex items-center text-xs text-gray-500 mb-2">
-                  <Calendar size={12} className="mr-1" />
-                  <span> {dayjs(post.updatedAt).format("MMMM D, YYYY")}</span>
-                  <span className="mx-2">•</span>
-                  <Clock size={12} className="mr-1" />
-                  {/* <span>{post.readTime}</span> */}
+                  <h3 className="mt-4 text-xl font-semibold leading-7 text-zinc-950">{post.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-zinc-600">{post.description}</p>
                 </div>
 
-                <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors line-clamp-2">
-                  {post.title}
-                </h4>
+                <div className="mt-6">
+                  <div className="mb-5 flex flex-wrap gap-2">
+                    {(post.tags || []).slice(0, 3).map((tag) => (
+                      <span key={tag.name} className="inline-flex items-center gap-1 rounded-md border border-zinc-200 px-2 py-1 text-xs font-medium text-zinc-600">
+                        <Tag size={12} />
+                        {tag.name}
+                      </span>
+                    ))}
+                  </div>
 
-                <p className="text-gray-400 text-sm mb-3 line-clamp-3">
-                  {post.description}
-                </p>
-
-                <div className="flex flex-wrap gap-1 mb-3">
-                  {post.tags.slice(0, 2).map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="inline-flex items-center px-2 py-0.5 bg-purple-900/20 text-purple-400 text-xs rounded-full"
-                    >
-                      {tag.name}
-                    </span>
-                  ))}
-                  {post.tags.length > 2 && (
-                    <span className="text-xs text-gray-500">
-                      +{post.tags.length - 2}
-                    </span>
-                  )}
+                  <Link
+                    href={`/blogs/${post.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-teal-900 transition-colors hover:text-teal-700"
+                  >
+                    <span>Read article</span>
+                    <ExternalLink size={15} />
+                  </Link>
                 </div>
-
-                <Link
-                  href={`/blogs/${post.slug}`}
-                  className="text-sm text-purple-400 hover:text-purple-300 transition-colors"
-                >
-                  Read More →
-                </Link>
               </article>
             ))}
           </div>
-        </div>
+        )}
 
-        <div className="text-center mt-12">
+        <div className="mt-10">
           <Link
             href="/blogs"
-            className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg transition-colors"
+            className="inline-flex items-center gap-2 rounded-md border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-950 transition-colors hover:border-teal-900 hover:text-teal-900"
           >
-            View All Posts
+            <span>View all posts</span>
+            <ArrowRight size={16} />
           </Link>
         </div>
       </div>
