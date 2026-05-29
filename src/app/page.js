@@ -70,7 +70,7 @@ const experiences = [
     company: "BuildPilot",
     meta: "Personal Project / Portfolio",
     period: "2025",
-    url: null,
+    url: "https://buildpilot-production-12ce.up.railway.app/",
     description:
       "Built an AI-powered startup planning platform that turns raw founder ideas into structured roadmaps, from authentication through deployment.",
     highlights: [
@@ -87,7 +87,7 @@ const experiences = [
     company: "HackrPost",
     meta: "AI-Powered SaaS Platform",
     period: "2025 - 2026",
-    url: null,
+    url: "http://hackrpost.com/",
     description:
       "Architected and led full-stack development of an AI-powered social media SaaS with a Node.js backend, Next.js frontend, and TypeScript across the product.",
     highlights: [
@@ -104,7 +104,7 @@ const experiences = [
     company: "AurifyAI",
     meta: "EdTech Platform",
     period: "2023 - 2025",
-    url: "https://aurifyai.vercel.app",
+    url: null,
     description:
       "Led the frontend team on an AI-powered EdTech platform with study summaries, intelligent test generation, and text-to-speech audio features.",
     highlights: [
@@ -152,7 +152,7 @@ const experiences = [
 const projects = [
   {
     title: "BuildPilot",
-    url: null,
+    url: "https://buildpilot-production-12ce.up.railway.app/",
     description:
       "AI startup planning platform that generates structured roadmaps, MVP scopes, target users, and execution phases.",
     tags: ["Laravel", "Inertia", "OpenAI", "Pest"],
@@ -166,7 +166,7 @@ const projects = [
   },
   {
     title: "AurifyAI",
-    url: "https://aurifyai.vercel.app",
+    url: null,
     description:
       "AI EdTech platform with study summaries, test generation, and text-to-speech learning tools.",
     tags: ["Next.js", "TypeScript", "AI"],

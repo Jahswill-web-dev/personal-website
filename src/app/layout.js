@@ -10,6 +10,10 @@ export const metadata = {
     "Jahswill Onuegbu, Full-Stack Developer, AI Integration, SaaS Developer, Laravel, Next.js, React, TypeScript",
   description:
     "Portfolio for Jahswill Onuegbu, a full-stack developer building AI-powered SaaS products with React, Next.js, Node.js, TypeScript, Laravel, and Inertia.js.",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
