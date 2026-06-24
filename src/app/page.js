@@ -49,6 +49,12 @@ const skills = [
   "MongoDB Atlas",
   "SQLite",
   "Redis",
+  "Docker",
+  "Azure Container Apps",
+  "Azure Container Registry",
+  "Azure Managed Identity",
+  "Railway",
+  "GitHub Actions",
   "OpenAI API",
   "LangChain.js",
   "BullMQ",
@@ -56,96 +62,79 @@ const skills = [
 ];
 
 const competencies = [
-  "SaaS architecture and product development",
-  "AI integration and structured LLM outputs",
-  "Frontend architecture and responsive UI",
-  "Laravel queues and async processing",
-  "API design, documentation, and testing",
-  "Team leadership and developer mentorship",
+  "End-to-end ownership from architecture through deployment",
+  "AI integration across LLM pipelines, custom training, and OpenAI",
+  "Cloud and DevOps with Docker, Azure Container Apps, and multi-service deployments",
+  "SaaS product builder with production AI platform experience",
+  "Scalable, maintainable system design and problem solving",
+  "API design, documentation, testing, and team mentorship",
 ];
 
 const experiences = [
   {
-    title: "Full-Stack Developer",
-    company: "BuildPilot",
-    meta: "Personal Project / Portfolio",
-    period: "2025",
-    url: "https://buildpilot-production-12ce.up.railway.app/",
-    description:
-      "Built an AI-powered startup planning platform that turns raw founder ideas into structured roadmaps, from authentication through deployment.",
-    highlights: [
-      "Integrated OpenAI through LangChain.js for structured roadmap generation.",
-      "Used Laravel Queues so AI generation never blocks the browser.",
-      "Covered auth, authorization, AI workflows, fallback handling, and business logic with Pest PHP tests.",
-      "Designed normalization and fallback services for incomplete AI responses or API downtime.",
-    ],
-    stack:
-      "PHP 8.3, Laravel 13, React 19, Inertia.js, Tailwind CSS 4, SQLite, Laravel Queues, LangChain.js, OpenAI API, Pest PHP",
-  },
-  {
-    title: "Technical Lead",
+    title: "Full-Stack Developer & Technical Lead",
     company: "HackrPost",
     meta: "AI-Powered SaaS Platform",
     period: "2025 - 2026",
-    url: "http://hackrpost.com/",
+    url: "https://hackrpost.com/",
     description:
-      "Architected and led full-stack development of an AI-powered social media SaaS with a Node.js backend, Next.js frontend, and TypeScript across the product.",
+      "Built and deployed HackrPost's AI-powered SaaS platform across backend architecture, LLM pipelines, scheduling infrastructure, and Azure production workloads.",
     highlights: [
-      "Trained a custom model for content optimization and integrated OpenAI for generation.",
-      "Built bulk scheduling against X API v2 with BullMQ and Upstash Redis.",
-      "Designed MongoDB Atlas schemas for fast content and scheduling workflows.",
-      "Maintained API clarity with OpenAPI/Swagger documentation.",
+      "Built a TypeScript/Express backend powering HackrPost's AI content engine for SaaS profiles, content pillars, subtopics, and publish-ready posts using LangChain, OpenAI, Gemini-ready integrations, Zod validation, and retry-safe LLM pipelines.",
+      "Designed a Redis/BullMQ scheduling system for automated social publishing to X and LinkedIn with OAuth token refresh, platform-specific APIs, retry logic, and error classification for billing, auth, policy, and rate-limit failures.",
+      "Containerized the backend with a multi-stage Docker build and deployed to Azure Container Apps via Azure Container Registry and managed identity, splitting production into a public API container and a dedicated BullMQ worker.",
+      "Designed the MongoDB Atlas schema for content management, user analytics, and scheduling workflows; implemented OAuth 2.0 token management and OpenAPI/Swagger specs for client-server integration.",
     ],
     stack:
-      "Node.js, Express, Next.js, React, TypeScript, MongoDB Atlas, BullMQ, Redis, OpenAI API, OpenAPI/Swagger",
+      "TypeScript, Node.js, Express, Next.js, React, MongoDB Atlas, BullMQ, Redis, LangChain, OpenAI API, Zod, OpenAPI/Swagger, Docker, Azure Container Apps, Azure Container Registry, Managed Identity",
   },
   {
-    title: "Lead Frontend Developer",
+    title: "Full-Stack Developer",
     company: "AurifyAI",
     meta: "EdTech Platform",
     period: "2023 - 2025",
-    url: null,
+    url: "https://aurifyai.vercel.app/",
     description:
-      "Led the frontend team on an AI-powered EdTech platform with study summaries, intelligent test generation, and text-to-speech audio features.",
+      "Built and deployed an AI-powered EdTech platform spanning responsive student experiences, LLM study generation, FastAPI services, and Azure-hosted background workers.",
     highlights: [
-      "Reduced content load times by 40% with code splitting, lazy loading, and caching.",
-      "Mentored junior developers on component architecture, state management, and TypeScript.",
-      "Contributed to architecture decisions for a scalable student-facing product.",
-      "Shipped responsive experiences across desktop and mobile.",
+      "Built a responsive student UI using Next.js and React, integrating LLM-powered study generation with real-time summarization, AI-driven test question generation, and text-to-speech audio playback.",
+      "Reduced content load times by 40% through code splitting, lazy loading, and caching for content-heavy AI study modules.",
+      "Engineered a FastAPI/Celery backend with PostgreSQL and Redis, enabling asynchronous background processing for AI study material generation with persistent, scalable data workflows.",
+      "Containerized and deployed the full FastAPI/Celery backend to Azure Container Apps using Docker, with separate API and worker services, Azure Redis, PostgreSQL, health probes, ingress, secrets management, CLI log analysis, and in-container connectivity validation.",
     ],
-    stack: "React.js, Next.js, TypeScript, OpenAI API, Text-to-Speech",
-  },
-  {
-    title: "Frontend Developer / Full-Stack Designer",
-    company: "Gold Dust AI",
-    meta: "Freelance Project",
-    period: "Mid 2023 - 6 months",
-    url: "https://golddustai.vercel.app/",
-    description:
-      "Designed and developed a responsive company website for an AI consulting firm using React, Next.js, and modern frontend practices.",
-    highlights: [
-      "Translated the company positioning into a clear, conversion-focused website.",
-      "Built responsive layouts for desktop and mobile visitors.",
-      "Collaborated with stakeholders on brand direction, content structure, and launch details.",
-      "Optimized frontend delivery with image and implementation best practices.",
-    ],
-    stack: "React, Next.js, Tailwind CSS, responsive web design",
+    stack: "Next.js, React, TypeScript, FastAPI, Celery, PostgreSQL, Redis, OpenAI API, Text-to-Speech, Docker, Azure Container Apps",
   },
   {
     title: "Frontend Developer",
     company: "J.J WILLMIN",
-    meta: "Web Development & Mentorship",
+    meta: "Web Development & Marketing",
     period: "2022 - 2023",
     url: "https://www.jjwillminmalls.com/",
     description:
-      "Built responsive marketing pages and supported frontend delivery for campaign and business web experiences.",
+      "Designed and developed campaign-focused landing pages and responsive website interfaces for marketing and business needs.",
     highlights: [
-      "Created landing pages and responsive website interfaces for campaign needs.",
-      "Improved page performance through image optimization and code minification.",
-      "Mentored junior developers and students in practical web development.",
-      "Supported website functionality improvements for target audience needs.",
+      "Designed and developed high-conversion landing pages for marketing campaigns.",
+      "Optimized UI for engagement and conversion-focused visitor flows.",
+      "Improved page performance through image optimization, code minification, and frontend best practices.",
+      "Mentored junior developers and students in practical frontend development.",
     ],
     stack: "HTML, CSS, JavaScript, React, responsive web design",
+  },
+  {
+    title: "Full-Stack Developer & Designer",
+    company: "Gold Dust AI",
+    meta: "Freelance Project",
+    period: "2023 - 6 months",
+    url: "https://golddustai.vercel.app/",
+    description:
+      "Designed and built a responsive company website for an AI consulting firm using Next.js, React, and modern frontend practices.",
+    highlights: [
+      "Translated the company positioning into a clear, conversion-focused web experience.",
+      "Optimized for performance, SEO, and accessibility across desktop and mobile.",
+      "Integrated contact forms and analytics for business inquiry tracking.",
+      "Collaborated with stakeholders on brand direction, content structure, and launch details.",
+    ],
+    stack: "Next.js, React, Tailwind CSS, SEO, accessibility, analytics",
   },
 ];
 
@@ -159,17 +148,17 @@ const projects = [
   },
   {
     title: "HackrPost",
-    url: null,
+    url: "https://hackrpost.com/",
     description:
       "AI social media SaaS for content generation, engagement optimization, and queued bulk scheduling.",
-    tags: ["Next.js", "Node.js", "BullMQ", "MongoDB"],
+    tags: ["Next.js", "Node.js", "Docker", "Azure"],
   },
   {
     title: "AurifyAI",
-    url: null,
+    url: "https://aurifyai.vercel.app/",
     description:
       "AI EdTech platform with study summaries, test generation, and text-to-speech learning tools.",
-    tags: ["Next.js", "TypeScript", "AI"],
+    tags: ["Next.js", "TypeScript", "Docker", "Azure"],
   },
   {
     title: "Gold Dust AI",
@@ -291,7 +280,7 @@ const Portfolio = () => {
                 className="inline-flex items-center gap-2 rounded-md border border-ink/15 bg-canvas px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent dark:border-canvas/20 dark:bg-ink dark:text-canvas dark:hover:border-accent dark:hover:text-accent"
               >
                 <Download size={16} />
-                <span>CV</span>
+                <span>Resume</span>
               </a>
             </div>
 
@@ -335,7 +324,7 @@ const Portfolio = () => {
                 className="flex items-center gap-2 rounded-md border border-ink/15 px-3 py-2 text-sm font-semibold text-ink dark:border-canvas/20 dark:text-canvas"
               >
                 <Download size={16} />
-                <span>Download CV</span>
+                <span>Download Resume</span>
               </a>
             </div>
           )}
@@ -374,7 +363,7 @@ const Portfolio = () => {
                   className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/15 bg-canvas px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent dark:border-canvas/20 dark:bg-ink dark:text-canvas dark:hover:border-accent dark:hover:text-accent"
                 >
                   <Download size={18} />
-                  <span>Download CV</span>
+                  <span>Download Resume</span>
                 </a>
               </div>
 
@@ -443,7 +432,7 @@ const Portfolio = () => {
               <div className="mt-4 grid grid-cols-3 gap-3">
                 {[
                   ["4+", "Years"],
-                  ["90%+", "Test coverage"],
+                  ["60%+", "Engagement lift"],
                   ["40%", "Load-time cut"],
                 ].map(([value, label]) => (
                   <div key={label} className="rounded-md border border-ink/10 bg-canvas p-4 shadow-sm dark:border-canvas/10 dark:bg-ink">
@@ -464,7 +453,7 @@ const Portfolio = () => {
                 <h2 className="mt-2 text-4xl font-semibold text-ink dark:text-canvas">Product work with real systems underneath.</h2>
               </div>
               <p className="max-w-xl text-base leading-7 text-ink/70 dark:text-canvas/70">
-                Recent work spans AI roadmapping, social scheduling, EdTech features, backend queues, testing, and production frontend architecture.
+                Recent work spans AI content systems, social scheduling, EdTech platforms, backend queues, Dockerized services, and Azure production deployments.
               </p>
             </div>
 
