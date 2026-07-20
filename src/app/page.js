@@ -72,18 +72,50 @@ const competencies = [
 
 const experiences = [
   {
-    title: "Full-Stack Developer & Technical Lead",
+    title: "Coding Instructor",
+    company: "ESINED Group",
+    meta: "Hybrid, Malta",
+    period: "2026",
+    url: "https://www.esinedgroup.com",
+    description:
+      "Teach coding in person and online through practical exercises, guided projects, and hands-on technical support.",
+    highlights: [
+      "Conducted coding classes in person and online.",
+      "Taught programming concepts through practical exercises and guided projects.",
+      "Supported students with assignments, debugging, and technical questions.",
+    ],
+    footerLabel: "Focus",
+    stack: "Programming instruction, practical exercises, guided projects, debugging support",
+  },
+  {
+    title: "Software Developer (Freelance)",
+    company: "CeeMore Smart Luxury Estates",
+    meta: "Remote",
+    period: "2026",
+    url: "https://ceemoresmartluxuryestates.com/",
+    description:
+      "Built a responsive real estate platform that gives staff direct control over property listings, website content, and incoming leads.",
+    highlights: [
+      "Built a responsive real estate website for showcasing property listings.",
+      "Developed a secure admin portal for adding, editing, and removing listings.",
+      "Created lead-tracking tools for property inquiries and follow-up requests.",
+      "Enabled staff to update website content without developer support.",
+    ],
+    stack: "Full-stack web development, admin portal, responsive UI, content management",
+  },
+  {
+    title: "Software Developer",
     company: "HackrPost",
-    meta: "AI-Powered SaaS Platform",
+    meta: "AI-Powered SaaS Platform · Remote",
     period: "2025 - 2026",
     url: "https://hackrpost.com/",
     description:
-      "Built and deployed HackrPost's AI-powered SaaS platform across backend architecture, LLM pipelines, scheduling infrastructure, and Azure production workloads.",
+      "Built and deployed backend systems for an AI-powered SaaS platform spanning content generation, social publishing, and production cloud infrastructure.",
     highlights: [
-      "Built a TypeScript/Express backend powering HackrPost's AI content engine for SaaS profiles, content pillars, subtopics, and publish-ready posts using LangChain, OpenAI, Gemini-ready integrations, Zod validation, and retry-safe LLM pipelines.",
-      "Designed a Redis/BullMQ scheduling system for automated social publishing to X and LinkedIn with OAuth token refresh, platform-specific APIs, retry logic, and error classification for billing, auth, policy, and rate-limit failures.",
-      "Containerized the backend with a multi-stage Docker build and deployed to Azure Container Apps via Azure Container Registry and managed identity, splitting production into a public API container and a dedicated BullMQ worker.",
-      "Designed the MongoDB Atlas schema for content management, user analytics, and scheduling workflows; implemented OAuth 2.0 token management and OpenAPI/Swagger specs for client-server integration.",
+      "Built a TypeScript and Express backend for AI-assisted content generation.",
+      "Developed automated publishing workflows for X and LinkedIn using BullMQ, Redis, and OAuth.",
+      "Deployed separate API and worker services to Azure Container Apps with Docker.",
+      "Designed MongoDB schemas and OpenAPI documentation for content, analytics, and scheduling.",
     ],
     stack:
       "TypeScript, Node.js, Express, Next.js, React, MongoDB Atlas, BullMQ, Redis, LangChain, OpenAI API, Zod, OpenAPI/Swagger, Docker, Azure Container Apps, Azure Container Registry, Managed Identity",
@@ -91,50 +123,46 @@ const experiences = [
   {
     title: "Full-Stack Developer",
     company: "AurifyAI",
-    meta: "EdTech Platform",
+    meta: "EdTech Platform · Remote, Nigeria",
     period: "2023 - 2025",
     url: "https://aurifyai.vercel.app/",
     description:
-      "Built and deployed an AI-powered EdTech platform spanning responsive student experiences, LLM study generation, FastAPI services, and Azure-hosted background workers.",
+      "Built and deployed an AI-powered EdTech platform spanning responsive student experiences, AI study tools, and scalable background services.",
     highlights: [
-      "Built a responsive student UI using Next.js and React, integrating LLM-powered study generation with real-time summarization, AI-driven test question generation, and text-to-speech audio playback.",
-      "Reduced content load times by 40% through code splitting, lazy loading, and caching for content-heavy AI study modules.",
-      "Engineered a FastAPI/Celery backend with PostgreSQL and Redis, enabling asynchronous background processing for AI study material generation with persistent, scalable data workflows.",
-      "Containerized and deployed the full FastAPI/Celery backend to Azure Container Apps using Docker, with separate API and worker services, Azure Redis, PostgreSQL, health probes, ingress, secrets management, CLI log analysis, and in-container connectivity validation.",
+      "Built a responsive Next.js interface for AI-generated study content, quizzes, and audio.",
+      "Developed FastAPI and Celery services with PostgreSQL and Redis for background processing.",
+      "Deployed Dockerized API and worker services on Azure Container Apps.",
     ],
     stack: "Next.js, React, TypeScript, FastAPI, Celery, PostgreSQL, Redis, OpenAI API, Text-to-Speech, Docker, Azure Container Apps",
   },
   {
-    title: "Frontend Developer",
-    company: "J.J WILLMIN",
-    meta: "Web Development & Marketing",
+    title: "Full-Stack Developer & Designer (Freelance)",
+    company: "Gold Dust AI",
+    meta: "Remote",
+    period: "2023 · 6 months",
+    url: "https://golddustai.vercel.app/",
+    description:
+      "Built a responsive company website for an AI consulting firm with a strong focus on performance, accessibility, and lead capture.",
+    highlights: [
+      "Built a responsive Next.js and React website for an AI consulting company.",
+      "Improved performance, SEO, accessibility, and lead capture with forms and analytics.",
+    ],
+    stack: "Next.js, React, Tailwind CSS, SEO, accessibility, analytics",
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "J.J Willmin",
+    meta: "Hybrid, Nigeria",
     period: "2022 - 2023",
     url: "https://www.jjwillminmalls.com/",
     description:
-      "Designed and developed campaign-focused landing pages and responsive website interfaces for marketing and business needs.",
+      "Built responsive, conversion-focused marketing experiences with lead management features and improved frontend performance.",
     highlights: [
-      "Designed and developed high-conversion landing pages for marketing campaigns.",
-      "Optimized UI for engagement and conversion-focused visitor flows.",
-      "Improved page performance through image optimization, code minification, and frontend best practices.",
-      "Mentored junior developers and students in practical frontend development.",
+      "Built responsive landing pages for marketing campaigns.",
+      "Built features to capture, manage, and follow up on leads.",
+      "Improved usability, page speed, and conversion-focused layouts.",
     ],
     stack: "HTML, CSS, JavaScript, React, responsive web design",
-  },
-  {
-    title: "Full-Stack Developer & Designer",
-    company: "Gold Dust AI",
-    meta: "Freelance Project",
-    period: "2023 - 6 months",
-    url: "https://golddustai.vercel.app/",
-    description:
-      "Designed and built a responsive company website for an AI consulting firm using Next.js, React, and modern frontend practices.",
-    highlights: [
-      "Translated the company positioning into a clear, conversion-focused web experience.",
-      "Optimized for performance, SEO, and accessibility across desktop and mobile.",
-      "Integrated contact forms and analytics for business inquiry tracking.",
-      "Collaborated with stakeholders on brand direction, content structure, and launch details.",
-    ],
-    stack: "Next.js, React, Tailwind CSS, SEO, accessibility, analytics",
   },
 ];
 
@@ -147,39 +175,11 @@ const projects = [
     tags: ["Laravel", "Inertia", "OpenAI", "Pest"],
   },
   {
-    title: "HackrPost",
-    url: "https://hackrpost.com/",
-    description:
-      "AI social media SaaS for content generation, engagement optimization, and queued bulk scheduling.",
-    tags: ["Next.js", "Node.js", "Docker", "Azure"],
-  },
-  {
-    title: "AurifyAI",
-    url: "https://aurifyai.vercel.app/",
-    description:
-      "AI EdTech platform with study summaries, test generation, and text-to-speech learning tools.",
-    tags: ["Next.js", "TypeScript", "Docker", "Azure"],
-  },
-  {
-    title: "Gold Dust AI",
-    url: "https://golddustai.vercel.app/",
-    description:
-      "Modern company website for an AI consulting firm focused on practical business automation.",
-    tags: ["React", "Next.js", "Design"],
-  },
-  {
     title: "Inkwell",
     url: "https://useinkwell.vercel.app/",
     description:
       "AI-powered writing assistant that helps users improve and reshape their writing.",
     tags: ["AI", "Frontend", "SaaS"],
-  },
-  {
-    title: "Airbnb Landing Page Clone",
-    url: "https://airbnbclone-olive.vercel.app/",
-    description:
-      "Responsive landing page recreation focused on layout accuracy and component polish.",
-    tags: ["Next.js", "Tailwind CSS"],
   },
 ];
 
@@ -275,7 +275,7 @@ const Portfolio = () => {
                 {isDarkMode ? <Sun size={16} /> : <Moon size={16} />}
               </button>
               <a
-                href="/Jahswill_Onuegbu_CV.docx"
+                href="/Jahswill_Onuegbu_Software_Developer.pdf"
                 download
                 className="inline-flex items-center gap-2 rounded-md border border-ink/15 bg-canvas px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent dark:border-canvas/20 dark:bg-ink dark:text-canvas dark:hover:border-accent dark:hover:text-accent"
               >
@@ -319,7 +319,7 @@ const Portfolio = () => {
                 </button>
               ))}
               <a
-                href="/Jahswill_Onuegbu_CV.docx"
+                href="/Jahswill_Onuegbu_Software_Developer.pdf"
                 download
                 className="flex items-center gap-2 rounded-md border border-ink/15 px-3 py-2 text-sm font-semibold text-ink dark:border-canvas/20 dark:text-canvas"
               >
@@ -345,8 +345,10 @@ const Portfolio = () => {
               </h1>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 dark:text-canvas/70">
-                I am Jahswill Onuegbu, a full-stack developer with 4+ years of experience shipping SaaS products,
-                AI-integrated platforms, and EdTech tools across React, Next.js, Node.js, TypeScript, Laravel, and Inertia.js.
+                I&apos;m Jahswill Onuegbu, a full-stack and AI engineer with 4+ years of experience building scalable web
+                applications and AI-powered SaaS products. I own products end to end—from database design and backend APIs
+                to responsive interfaces and cloud deployment—with strong experience in Next.js, TypeScript, Node.js,
+                FastAPI, and LLM integration.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -358,7 +360,7 @@ const Portfolio = () => {
                   <span>Get in touch</span>
                 </a>
                 <a
-                  href="/Jahswill_Onuegbu_CV.docx"
+                  href="/Jahswill_Onuegbu_Software_Developer.pdf"
                   download
                   className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/15 bg-canvas px-5 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent hover:text-accent dark:border-canvas/20 dark:bg-ink dark:text-canvas dark:hover:border-accent dark:hover:text-accent"
                 >
@@ -494,7 +496,7 @@ const Portfolio = () => {
                         ))}
                       </div>
                       <p className="mt-5 rounded-md border border-ink/10 bg-canvas p-3 text-sm leading-6 text-ink/70 dark:border-canvas/10 dark:bg-ink dark:text-canvas/70">
-                        <span className="font-semibold text-ink dark:text-canvas">Stack: </span>
+                        <span className="font-semibold text-ink dark:text-canvas">{experience.footerLabel || "Stack"}: </span>
                         {experience.stack}
                       </p>
                     </div>
