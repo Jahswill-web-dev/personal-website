@@ -134,7 +134,7 @@ const experiences = [
     highlights: [
       "Built a responsive Next.js interface for AI-generated study content, quizzes, and audio.",
       "Designed multi-stage AI and agentic pipelines for content generation and workflow orchestration.",
-      "Built FastAPI services handling 10,000+ daily requests with 99.9% uptime.",
+      "Designed FastAPI services and asynchronous processing architecture to support high-volume AI workloads.",
       "Deployed Dockerized microservices with Kubernetes and GitHub Actions CI/CD.",
     ],
     stack: "Next.js, FastAPI, Gemini, Vertex AI, AWS S3, Celery, Redis, Docker, Kubernetes",
@@ -447,7 +447,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3">
-                  {[["5+", "Years"], ["10k+", "Daily API calls"], ["99.9%", "Uptime"]].map(([value, label]) => (
+                  {[["5+", "Years"], ["3,000+", "Marketplace users"], ["3", "Cloud platforms"]].map(([value, label]) => (
                     <div key={label} className="rounded-md border border-ink/10 p-4 shadow-sm dark:border-canvas/10">
                       <p className="text-2xl font-semibold">{value}</p>
                       <p className="mt-1 text-xs font-medium uppercase text-ink/55 dark:text-canvas/55">{label}</p>
