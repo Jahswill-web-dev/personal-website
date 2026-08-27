@@ -50,7 +50,11 @@ const skills = [
   "PHP",
   "Laravel",
   "Tailwind CSS",
+  "Lexical",
+  "Zod",
   "PostgreSQL",
+  "SQLAlchemy",
+  "Alembic",
   "MySQL",
   "MongoDB",
   "Redis",
@@ -61,8 +65,12 @@ const skills = [
   "Microsoft Azure",
   "GCP",
   "GitHub Actions",
+  "Jenkins",
+  "Linux",
   "CI/CD",
   "OpenAI API",
+  "Vertex AI",
+  "OpenRouter",
   "LLM Integration",
   "AI Agents",
   "GraphQL",
@@ -70,14 +78,30 @@ const skills = [
 
 const competencies = [
   "End-to-end product architecture, engineering leadership, and delivery",
-  "AI agent development, ML engineering, NLP, and LLM integration",
-  "Cloud-native delivery across AWS, Microsoft Azure, and Google Cloud",
+  "AI-native publishing, agent development, ML engineering, NLP, and LLM integration",
+  "Cloud-native and serverless delivery across AWS, Microsoft Azure, and Google Cloud",
   "REST, GraphQL, webhooks, OAuth, and microservices architecture",
-  "OWASP principles, JWT authentication, and automated testing",
-  "Scalable SaaS, Web2, and Web3 product engineering",
+  "OWASP principles, prompt-injection safeguards, JWT authentication, and automated testing",
+  "Scalable SaaS, Web2, Web3, and blockchain-integrated product engineering",
 ];
 
 const experiences = [
+  {
+    title: "Founder & Lead Engineer",
+    company: "Inkwell",
+    meta: "AI-Native Publishing Platform",
+    period: "2026",
+    url: "https://useinkwell.vercel.app/",
+    description:
+      "Architected an AI-native publishing platform that turns raw ideas and strategic briefs into editorial plans, structured outlines, and publication-ready long-form content.",
+    highlights: [
+      "Engineered context-aware planning and writing workflows with interview-led collaboration and inline AI previews.",
+      "Built a resilient rich-text workspace with Next.js, TypeScript, React, Lexical, semantic content models, and stale-response safeguards.",
+      "Developed FastAPI and PostgreSQL services with SQLAlchemy, Alembic, JWT authentication, validated APIs, and resource-ownership controls.",
+      "Designed provider-agnostic Vertex AI and OpenRouter orchestration with prompt-injection safeguards, retries, observability, and 220+ automated tests.",
+    ],
+    stack: "Next.js, TypeScript, React, Lexical, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Vertex AI, OpenRouter",
+  },
   {
     title: "Coding Instructor",
     company: "ESINED Group",
@@ -114,6 +138,7 @@ const experiences = [
     company: "HackrPost",
     meta: "AI-Powered SaaS Platform · Remote",
     period: "2025 - 2026",
+    url: "http://hackrpost.com/",
     description:
       "Led the engineering team and owned the architecture, delivery, and deployment of an AI content and social publishing platform.",
     highlights: [
@@ -248,11 +273,11 @@ const projects = [
   },
   {
     title: "Inkwell",
-    eyebrow: "AI Writing Assistant",
+    eyebrow: "AI-Native Publishing Platform",
     url: "https://useinkwell.vercel.app/",
     description:
-      "Helps users strengthen, reshape, and refine their writing through an intentionally focused interface.",
-    tags: ["AI", "Frontend", "SaaS"],
+      "Transforms ideas and strategic briefs into editorial plans, structured outlines, contextual talking points, and publication-ready long-form content through collaborative AI workflows.",
+    tags: ["Next.js", "Lexical", "FastAPI", "Vertex AI"],
   },
 ];
 
@@ -388,15 +413,15 @@ export default function Portfolio() {
               <div>
                 <div className="mb-6 inline-flex items-center gap-2 rounded-md border border-accent/20 px-3 py-2 text-sm font-semibold text-accent shadow-sm">
                   <Sparkles size={16} />
-                  Software engineer · AI integration · Full-stack development
+                  Founder &amp; software engineer · AI integration · Full-stack development
                 </div>
                 <h1 className="max-w-4xl text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
                   I engineer intelligent products that are built to scale.
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 dark:text-canvas/70">
-                  I&apos;m Jahswill Onuegbu, a software engineer with 5+ years of experience building SaaS products,
-                  cloud-native platforms, and production-ready Web2 and Web3 solutions. I specialize in Python,
-                  JavaScript, AI agents, machine learning, LLM integration, and full-stack systems.
+                  I&apos;m Jahswill Onuegbu, a software engineer and founder with 5+ years of experience building AI-native
+                  SaaS products, cloud-native platforms, and production-ready Web2 and Web3 solutions. I specialize in
+                  Python, JavaScript, AI agents, machine learning, LLM and blockchain integrations, and serverless systems.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a href="mailto:onuegbujahswill@gmail.com" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-accent/90">
