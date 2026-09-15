@@ -87,6 +87,56 @@ const competencies = [
 
 const experiences = [
   {
+<<<<<<< HEAD
+=======
+    title: "Founder & Lead Engineer",
+    company: "Inkwell",
+    meta: "AI-Native Publishing Platform",
+    period: "2026",
+    url: "https://useinkwell.vercel.app/",
+    description:
+      "Architected an AI-native publishing platform that turns raw ideas and strategic briefs into editorial plans, structured outlines, and publication-ready long-form content.",
+    highlights: [
+      "Engineered context-aware planning and writing workflows with interview-led collaboration and inline AI previews.",
+      "Built a resilient rich-text workspace with Next.js, TypeScript, React, Lexical, semantic content models, and stale-response safeguards.",
+      "Developed FastAPI and PostgreSQL services with SQLAlchemy, Alembic, JWT authentication, validated APIs, and resource-ownership controls.",
+      "Designed provider-agnostic Vertex AI and OpenRouter orchestration with prompt-injection safeguards, retries, observability, and 220+ automated tests.",
+    ],
+    stack: "Next.js, TypeScript, React, Lexical, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Vertex AI, OpenRouter",
+  },
+  {
+    title: "Coding Instructor",
+    company: "ESINED Group",
+    meta: "Hybrid, Malta",
+    period: "2026",
+    url: "https://www.esinedgroup.com",
+    description:
+      "Deliver structured coding instruction in hybrid formats, adapting lessons and support to varied skill levels.",
+    highlights: [
+      "Design hands-on exercises and guided projects that turn programming concepts into practical skills.",
+      "Provide individualized code review, debugging support, assignment feedback, and technical mentoring.",
+    ],
+    footerLabel: "Focus",
+    stack: "Programming instruction, guided projects, code review, debugging support",
+  },
+  {
+    title: "Software Engineer (Freelance)",
+    company: "Ceemore Smart Luxury Estates",
+    meta: "Remote",
+    period: "Jan 2026 - Mar 2026",
+    url: "https://ceemoresmartluxuryestates.com/",
+    description:
+      "Led end-to-end delivery of a custom real estate platform, from requirements and architecture through production.",
+    highlights: [
+      "Built secure authentication and a role-based staff portal for analytics, listings, and administration.",
+      "Created workflows for property projects, client records, inquiries, support, and follow-ups.",
+      "Built scalable Node.js APIs and PostgreSQL models for high-traffic workloads.",
+      "Deployed to Microsoft Azure with GitHub Actions CI/CD and production release pipelines.",
+    ],
+    stack: "Next.js, React, TypeScript, Node.js, PostgreSQL, Microsoft Azure, GitHub Actions",
+  },
+  {
+>>>>>>> 7a99fe7fe7c9086dba4e4e48d3f2b044324d1e3b
     title: "Technical Lead & Senior Full-Stack Engineer",
     company: "HackrPost",
     meta: "AI-Powered SaaS Platform",
