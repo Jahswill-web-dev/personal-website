@@ -87,143 +87,114 @@ const competencies = [
 
 const experiences = [
   {
-    title: "Founder & Lead Engineer",
-    company: "Inkwell",
-    meta: "AI-Native Publishing Platform",
-    period: "2026",
-    url: "https://useinkwell.vercel.app/",
-    description:
-      "Architected an AI-native publishing platform that turns raw ideas and strategic briefs into editorial plans, structured outlines, and publication-ready long-form content.",
-    highlights: [
-      "Engineered context-aware planning and writing workflows with interview-led collaboration and inline AI previews.",
-      "Built a resilient rich-text workspace with Next.js, TypeScript, React, Lexical, semantic content models, and stale-response safeguards.",
-      "Developed FastAPI and PostgreSQL services with SQLAlchemy, Alembic, JWT authentication, validated APIs, and resource-ownership controls.",
-      "Designed provider-agnostic Vertex AI and OpenRouter orchestration with prompt-injection safeguards, retries, observability, and 220+ automated tests.",
-    ],
-    stack: "Next.js, TypeScript, React, Lexical, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Vertex AI, OpenRouter",
-  },
-  {
-    title: "Coding Instructor",
-    company: "ESINED Group",
-    meta: "Hybrid, Malta",
-    period: "2026",
-    url: "https://www.esinedgroup.com",
-    description:
-      "Deliver structured coding instruction in hybrid formats, adapting lessons and support to varied skill levels.",
-    highlights: [
-      "Design hands-on exercises and guided projects that turn programming concepts into practical skills.",
-      "Provide individualized code review, debugging support, assignment feedback, and technical mentoring.",
-    ],
-    footerLabel: "Focus",
-    stack: "Programming instruction, guided projects, code review, debugging support",
-  },
-  {
-    title: "Software Engineer (Freelance)",
-    company: "Ceemore Smart Luxury Estates",
-    meta: "Remote",
-    period: "Jan 2026 - Mar 2026",
-    url: "https://ceemoresmartluxuryestates.com/",
-    description:
-      "Led end-to-end delivery of a custom real estate platform, from requirements and architecture through production.",
-    highlights: [
-      "Built secure authentication and a role-based staff portal for analytics, listings, and administration.",
-      "Created workflows for property projects, client records, inquiries, support, and follow-ups.",
-      "Built scalable Node.js APIs and PostgreSQL models for high-traffic workloads.",
-      "Deployed to Microsoft Azure with GitHub Actions CI/CD and production release pipelines.",
-    ],
-    stack: "Next.js, React, TypeScript, Node.js, PostgreSQL, Microsoft Azure, GitHub Actions",
-  },
-  {
     title: "Technical Lead & Senior Full-Stack Engineer",
     company: "HackrPost",
-    meta: "AI-Powered SaaS Platform · Remote",
+    meta: "AI-Powered SaaS Platform",
     period: "2025 - 2026",
     url: "http://hackrpost.com/",
     description:
-      "Led the engineering team and owned the architecture, delivery, and deployment of an AI content and social publishing platform.",
+      "Led end-to-end architecture, team delivery, and production deployment for an AI-powered social-content automation platform built around autonomous and semi-autonomous AI agents.",
     highlights: [
-      "Architected Node.js, Express, and MongoDB services for content, analytics, and publishing.",
-      "Integrated OpenAI and fine-tuned models using cleaned, structured, and validated training data.",
-      "Built X scheduling and AI auto-posting with OAuth, BullMQ, Redis, and multiple workers.",
-      "Deployed Docker services to Azure and GCP with CI/CD and automated test coverage.",
+      "Designed LangChain-based agent workflows that plan content, retrieve relevant context, generate and refine posts, and coordinate publishing actions through APIs and platform tooling.",
+      "Implemented RAG and semantic-retrieval patterns to ground social content in structured knowledge and campaign context, improving relevance and reducing unsupported outputs.",
+      "Integrated OpenAI and fine-tuned models with cleaned, structured, and validated training data; addressed dataset imbalance and biased outputs to improve consistency and relevance.",
+      "Built AI auto-posting and X scheduling workflows with OAuth, BullMQ, Redis, and multiple workers; deployed Docker workloads to Azure and GCP with CI/CD and automated tests.",
     ],
-    stack: "Next.js, TypeScript, Node.js, Express, MongoDB, OpenAI, BullMQ, Redis, Docker, Azure, GCP",
+    stack: "LangChain, RAG, OpenAI, OAuth, BullMQ, Redis, Docker, Azure, GCP, CI/CD",
   },
   {
     title: "AI & Software Engineer",
     company: "AurifyAI",
-    meta: "EdTech Platform · Remote, Nigeria",
+    meta: "EdTech Platform",
     period: "2024 - 2025",
     description:
-      "Built an AI learning platform with multimodal study experiences, agentic workflows, and cloud-native services.",
+      "Designed LangChain-powered multi-stage AI and agentic workflows for study-content generation, quizzes, guided learning, and personalized learning support.",
     highlights: [
-      "Built a responsive Next.js interface for AI-generated study content, quizzes, and audio.",
-      "Designed multi-stage AI and agentic pipelines for content generation and workflow orchestration.",
-      "Designed FastAPI services and asynchronous processing architecture to support high-volume AI workloads.",
-      "Deployed Dockerized microservices with Kubernetes and GitHub Actions CI/CD.",
+      "Built RAG pipelines using semantic retrieval, embeddings, and vector-store knowledge sources to ground generated learning materials in relevant educational content.",
+      "Integrated Gemini and Vertex AI on Google Cloud to support scalable inference, structured automation, and AI-powered educational experiences.",
+      "Built FastAPI services and asynchronous processing architecture for high-volume AI workloads, pairing JWT authentication and AWS S3 with Celery/Redis workflows.",
+      "Delivered text-to-speech and AI audio features and deployed Dockerized microservices with Kubernetes and CI/CD.",
     ],
-    stack: "Next.js, FastAPI, Gemini, Vertex AI, AWS S3, Celery, Redis, Docker, Kubernetes",
+    stack: "LangChain, RAG, FastAPI, Gemini, Vertex AI, GCP, AWS S3, Celery, Redis, Docker, Kubernetes, CI/CD",
   },
   {
     title: "AI Integration Specialist & Engineer",
     company: "Gold Dust AI",
-    meta: "Remote",
-    period: "2023 · 6 months",
+    meta: "Consulting",
+    period: "2023 (6 months)",
     description:
-      "Led delivery of AI automation, integration, and workflow solutions for consulting clients.",
+      "Led delivery of AI automation, LangChain-enabled agent workflows, LLM integration, and RAG solutions for consulting clients, translating business requirements into deployable technical systems.",
     highlights: [
-      "Designed AI workflows integrating OpenAI and LLM APIs with client applications and business systems.",
-      "Connected forms, CRM, analytics, and third-party services through REST APIs and webhooks.",
-      "Built a responsive Next.js website with strong performance, accessibility, and lead capture.",
-      "Added validation, logging, monitoring, and error handling for production reliability.",
+      "Designed semantic-retrieval and knowledge-grounding workflows using embeddings and vector-store patterns, helping agents generate responses from relevant client information.",
+      "Integrated OpenAI and LLM APIs with forms, CRM platforms, analytics, and third-party services through REST APIs, webhooks, and tool integrations.",
+      "Strengthened client platforms with validation, logging, monitoring, SEO, and accessibility improvements.",
     ],
-    stack: "OpenAI, LLM APIs, REST APIs, webhooks, Next.js, React, analytics, monitoring",
+    stack: "LangChain, RAG, OpenAI, LLM APIs, embeddings, vector stores, REST APIs, webhooks, monitoring",
+  },
+  {
+    title: "AI Development",
+    company: "Inkwell",
+    meta: "Personal AI-Native Publishing Project",
+    period: "",
+    url: "https://useinkwell.vercel.app/",
+    description:
+      "Built a voice-led client discovery experience where an AI interviewer conducts a 10-15 minute realtime conversation, captures the transcript, and transforms client input into structured, source-grounded editorial insights.",
+    highlights: [
+      "Designed an agentic, human-in-the-loop content workflow from article intake to AI-generated briefs, outlines, talking points, interview questions, and contextual section drafts, with writers retaining editorial control.",
+      "Engineered an asynchronous FastAPI and PostgreSQL backend with OpenAI Realtime and Responses APIs plus provider-agnostic Gemini, Vertex AI, and OpenRouter generation paths.",
+      "Implemented typed schemas, transcript source validation, JWT authorization, prompt-injection safeguards, retries, timeouts, and token and latency observability.",
+    ],
+    stack: "FastAPI, PostgreSQL, OpenAI Realtime, OpenAI Responses API, Gemini, Vertex AI, OpenRouter, JWT",
+  },
+  {
+    title: "Software Engineer (Freelance)",
+    company: "Ceemore Smart Luxury Estates",
+    meta: "Real Estate Platform",
+    period: "Jan 2026 - Mar 2026",
+    url: "https://ceemoresmartluxuryestates.com/",
+    description:
+      "Led end-to-end delivery of a custom real-estate platform from requirements through production, including secure authentication and a role-based staff portal.",
+    highlights: [
+      "Built Node.js APIs and PostgreSQL models with Next.js, React, TypeScript, and Tailwind CSS.",
+      "Deployed to Azure through GitHub Actions CI/CD.",
+    ],
+    stack: "Next.js, React, TypeScript, Tailwind CSS, Node.js, PostgreSQL, Azure, GitHub Actions, CI/CD",
   },
   {
     title: "Lead Frontend Engineer",
     company: "PLPFactory",
-    meta: "Design Marketplace · Remote, Nigeria",
+    meta: "Design Marketplace",
     period: "2022 - 2024",
     description:
-      "Led frontend engineering for a design marketplace serving more than 3,000 users and visitors.",
+      "Led frontend engineering for a design marketplace serving 3,000+ users and visitors, delivering reusable React/Redux components and critical workflow tests.",
     highlights: [
-      "Built responsive flows for browsing, buying, selling, and managing digital design assets.",
-      "Created reusable component systems and consistent UI patterns across the platform.",
-      "Implemented Redux state management for sessions, marketplace data, and user interactions.",
-      "Led planning, code reviews, UI testing, and delivery coordination across teams.",
+      "Led planning, code reviews, and delivery coordination across product and backend teams.",
     ],
-    stack: "React, Redux, component systems, UI testing, engineering leadership",
-  },
-  {
-    title: "Programming Instructor & Community Mentor",
-    company: "Coderzwave",
-    meta: "Online Coding Community · Remote",
-    period: "2022",
-    description:
-      "Taught programming to hundreds of students through structured live classes, exercises, and community workshops.",
-    highlights: [
-      "Designed practical lessons and guided projects that made core concepts accessible.",
-      "Mentored students through debugging, problem-solving, code reviews, and technical challenges.",
-      "Led interactive technical discussions and question-and-answer workshops.",
-    ],
-    footerLabel: "Focus",
-    stack: "Live instruction, coding exercises, mentoring, code review, community learning",
+    stack: "React, Redux, reusable components, workflow testing, engineering leadership",
   },
   {
     title: "Full-Stack Software Engineer & Business Systems",
     company: "J.J Willmin",
-    meta: "Hybrid, Nigeria",
+    meta: "Business Systems",
     period: "Jan 2021 - Dec 2022",
     url: "https://www.jjwillminmalls.com/",
     description:
-      "Built business systems for construction projects, clients, employees, advertising, and sales operations.",
+      "Built business applications and CRM workflows for construction projects, client management, employee operations, and lead follow-up.",
     highlights: [
-      "Built a custom CRM for managing and following up on leads across the sales pipeline.",
-      "Engineered a load-balanced architecture supporting thousands of requests per minute.",
-      "Created client and employee workflows that centralized records and operational activities.",
-      "Implemented visit, event, campaign, and advertising performance tracking.",
+      "Engineered a load-balanced architecture supporting thousands of requests per minute and responsive React-based interfaces.",
     ],
-    stack: "React, jQuery, Styled Components, CRM systems, load-balanced architecture, analytics",
+    stack: "Business applications, CRM workflows, React, load-balanced architecture",
+  },
+  {
+    title: "Coding Instructor & Community Mentor",
+    company: "ESINED Group and Coderzwave",
+    meta: "Technical Education",
+    period: "2022 - 2026",
+    description:
+      "Delivered structured instruction, code reviews, debugging support, and technical mentoring for learners with varied skill levels.",
+    highlights: [],
+    footerLabel: "Focus",
+    stack: "Structured instruction, code review, debugging support, technical mentoring",
   },
 ];
 
@@ -496,8 +467,8 @@ export default function Portfolio() {
                     <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
                       <div>
                         <div className="flex flex-wrap items-center gap-2 text-sm text-ink/55 dark:text-canvas/55">
-                          <span>{experience.period}</span>
-                          <span className="h-1 w-1 rounded-full bg-accent" />
+                          {experience.period && <span>{experience.period}</span>}
+                          {experience.period && experience.meta && <span className="h-1 w-1 rounded-full bg-accent" />}
                           <span>{experience.meta}</span>
                         </div>
                         <h3 className="mt-3 text-2xl font-semibold">{experience.title}</h3>
@@ -510,14 +481,16 @@ export default function Portfolio() {
                         <p className="mt-4 text-sm leading-6 text-ink/70 dark:text-canvas/70">{experience.description}</p>
                       </div>
                       <div>
-                        <div className="grid gap-2 sm:grid-cols-2">
-                          {experience.highlights.map((highlight) => (
-                            <div key={highlight} className="flex gap-2 text-sm leading-6 text-ink/75 dark:text-canvas/75">
-                              <ChevronRight size={16} className="mt-1 shrink-0 text-accent" />
-                              <span>{highlight}</span>
-                            </div>
-                          ))}
-                        </div>
+                        {experience.highlights.length > 0 && (
+                          <div className="grid gap-2 sm:grid-cols-2">
+                            {experience.highlights.map((highlight) => (
+                              <div key={highlight} className="flex gap-2 text-sm leading-6 text-ink/75 dark:text-canvas/75">
+                                <ChevronRight size={16} className="mt-1 shrink-0 text-accent" />
+                                <span>{highlight}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                         <p className="mt-5 rounded-md border border-ink/10 p-3 text-sm leading-6 text-ink/70 dark:border-canvas/10 dark:text-canvas/70">
                           <span className="font-semibold text-ink dark:text-canvas">{experience.footerLabel || "Stack"}: </span>
                           {experience.stack}
