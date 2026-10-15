@@ -5,11 +5,11 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Jahswill Onuegbu | Software Engineer",
+  title: "Jahswill Onuegbu | AI & Full-Stack Software Engineer",
   keywords:
-    "Jahswill Onuegbu, Software Engineer, Founder, Full-Stack Developer, AI Engineer, AI Integration, AI-Native Publishing, SaaS, Python, Next.js, React, TypeScript, Cloud, Web3",
+    "Jahswill Onuegbu, AI Engineer, Full-Stack Software Engineer, Frontend Developer, Backend Engineer, Next.js, React, TypeScript, Python, FastAPI, Node.js, SaaS, EdTech, Cloud",
   description:
-    "Portfolio for Jahswill Onuegbu, a software engineer and founder building scalable AI-native SaaS products, cloud-native platforms, and Web3 systems.",
+    "Portfolio for Jahswill Onuegbu, an AI and full-stack software engineer building responsive interfaces, secure APIs, AI-powered workflows, cloud services, and production software.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

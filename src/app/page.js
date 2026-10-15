@@ -37,220 +37,175 @@ const navItems = [
   { id: "projects", label: "Projects", icon: FolderOpen },
 ];
 
-const skills = [
-  "C",
-  "Python",
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-  "FastAPI",
-  "PHP",
-  "Laravel",
-  "Tailwind CSS",
-  "Lexical",
-  "Zod",
-  "PostgreSQL",
-  "SQLAlchemy",
-  "Alembic",
-  "MySQL",
-  "MongoDB",
-  "Redis",
-  "SQLite",
-  "Docker",
-  "Kubernetes",
-  "AWS",
-  "Microsoft Azure",
-  "GCP",
-  "GitHub Actions",
-  "Jenkins",
-  "Linux",
-  "CI/CD",
-  "OpenAI API",
-  "Vertex AI",
-  "OpenRouter",
-  "LLM Integration",
-  "AI Agents",
-  "GraphQL",
+const skillGroups = [
+  {
+    title: "Frontend",
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "Redux", "Tailwind CSS", "Lexical", "Responsive UI", "Accessibility", "Component Systems"],
+  },
+  {
+    title: "Backend & Data",
+    skills: ["Python", "Node.js", "Express", "FastAPI", "PHP", "Laravel", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "SQLAlchemy"],
+  },
+  {
+    title: "AI & Cloud",
+    skills: ["LLMs", "AI Agents", "Gemini", "Vertex AI", "OpenAI", "OpenRouter", "Docker", "Kubernetes", "AWS", "Azure", "GCP"],
+  },
+  {
+    title: "Delivery & Quality",
+    skills: ["GitHub Actions", "CI/CD", "Celery", "BullMQ", "OAuth", "JWT", "Pytest", "Unit Testing", "Integration Testing", "E2E Testing", "Logging", "Monitoring"],
+  },
 ];
 
-const competencies = [
-  "End-to-end product architecture, engineering leadership, and delivery",
-  "AI-native publishing, agent development, ML engineering, NLP, and LLM integration",
-  "Cloud-native and serverless delivery across AWS, Microsoft Azure, and Google Cloud",
-  "REST, GraphQL, webhooks, OAuth, and microservices architecture",
-  "OWASP principles, prompt-injection safeguards, JWT authentication, and automated testing",
-  "Scalable SaaS, Web2, Web3, and blockchain-integrated product engineering",
-];
-
-const experiences = [
+const experienceGroups = [
   {
-<<<<<<< HEAD
-=======
-    title: "Founder & Lead Engineer",
-    company: "Inkwell",
-    meta: "AI-Native Publishing Platform",
-    period: "2026",
-    url: "https://useinkwell.vercel.app/",
-    description:
-      "Architected an AI-native publishing platform that turns raw ideas and strategic briefs into editorial plans, structured outlines, and publication-ready long-form content.",
-    highlights: [
-      "Engineered context-aware planning and writing workflows with interview-led collaboration and inline AI previews.",
-      "Built a resilient rich-text workspace with Next.js, TypeScript, React, Lexical, semantic content models, and stale-response safeguards.",
-      "Developed FastAPI and PostgreSQL services with SQLAlchemy, Alembic, JWT authentication, validated APIs, and resource-ownership controls.",
-      "Designed provider-agnostic Vertex AI and OpenRouter orchestration with prompt-injection safeguards, retries, observability, and 220+ automated tests.",
+    title: "Core professional experience",
+    experiences: [
+      {
+        company: "AurifyAI",
+        meta: "EdTech Platform",
+        period: "Jan 2023 - Dec 2025",
+        roles: [
+          { title: "Lead Frontend Developer", period: "Jan 2023 - Dec 2023" },
+          { title: "AI Engineer", period: "Jan 2024 - Dec 2025" },
+        ],
+        description:
+          "Progressed from leading frontend delivery for an AI-powered learning platform to engineering its multi-stage AI, backend, and cloud systems.",
+        highlights: [
+          "Created reusable, accessible Next.js and TypeScript experiences for generated study content, quizzes, guided learning, and audio.",
+          "Designed Gemini and Vertex AI pipelines for content generation, workflow orchestration, and scalable inference.",
+          "Built FastAPI services with Celery, Redis, JWT authentication, AWS S3, validation, retries, and error handling.",
+          "Delivered TTS and AI audio capabilities and deployed Dockerized microservices with Kubernetes and GitHub Actions CI/CD.",
+        ],
+        stack: "Next.js, TypeScript, FastAPI, Gemini, Vertex AI, Celery, Redis, AWS S3, Docker, Kubernetes",
+      },
+      {
+        company: "J.J Willmin",
+        meta: "Construction & Business Systems",
+        period: "Jan 2021 - Jan 2024",
+        url: "https://www.jjwillminmalls.com/",
+        roles: [
+          { title: "Junior Frontend Developer", period: "Jan 2021 - Dec 2021" },
+          { title: "Full-Stack Engineer", period: "Jan 2022 - Jan 2024" },
+        ],
+        description:
+          "Progressed from responsive frontend delivery into full-stack ownership of a custom business application and CRM.",
+        highlights: [
+          "Built React, jQuery, and Styled Components workflows for construction projects, client records, lead generation, and internal operations.",
+          "Developed systems for projects, clients, employees, sales follow-up, operational reporting, and centralized data handling.",
+          "Integrated APIs, analytics, automated notifications, visit and event records, and advertising-performance tracking.",
+          "Supported production reliability and translated business requirements into reusable operational workflows.",
+        ],
+        stack: "React, jQuery, Styled Components, APIs, analytics, CRM workflows, production support",
+      },
     ],
-    stack: "Next.js, TypeScript, React, Lexical, FastAPI, PostgreSQL, SQLAlchemy, Alembic, Vertex AI, OpenRouter",
   },
   {
-    title: "Coding Instructor",
-    company: "ESINED Group",
-    meta: "Hybrid, Malta",
-    period: "2026",
-    url: "https://www.esinedgroup.com",
-    description:
-      "Deliver structured coding instruction in hybrid formats, adapting lessons and support to varied skill levels.",
-    highlights: [
-      "Design hands-on exercises and guided projects that turn programming concepts into practical skills.",
-      "Provide individualized code review, debugging support, assignment feedback, and technical mentoring.",
+    title: "Freelance projects",
+    experiences: [
+      {
+        title: "Technical Lead & Senior Full-Stack Engineer (Freelance)",
+        company: "HackrPost",
+        meta: "AI-Powered SaaS Platform",
+        period: "Dec 2025 - May 2026",
+        url: "http://hackrpost.com/",
+        description:
+          "Led architecture and engineering delivery across product interfaces, backend services, analytics, AI integration, and publishing workflows.",
+        highlights: [
+          "Built with Next.js, TypeScript, Node.js, Express, and MongoDB.",
+          "Integrated OpenAI and fine-tuned models using cleaned and validated training data, improving consistency and relevance.",
+          "Built X API scheduling and AI auto-posting with OAuth, BullMQ, Redis, and multiple worker services.",
+          "Deployed Docker services to Azure and GCP through CI/CD with unit, integration, and end-to-end testing.",
+        ],
+        stack: "Next.js, TypeScript, Node.js, Express, MongoDB, OpenAI, OAuth, BullMQ, Redis, Docker, Azure, GCP",
+      },
+      {
+        title: "Senior Frontend Developer (Freelance)",
+        company: "PLPFactory",
+        meta: "Design Marketplace",
+        period: "Oct 2022 - Dec 2024",
+        description:
+          "Led frontend delivery for a React and Redux marketplace serving 10,000 visitors.",
+        highlights: [
+          "Built responsive workflows for browsing, buying, selling, and managing design assets.",
+          "Developed reusable component systems and managed application state, forms, loading states, and error recovery.",
+          "Added UI tests for critical workflows and supported code review, release validation, and cross-team coordination.",
+        ],
+        stack: "React, Redux, component systems, state management, forms, UI testing",
+      },
+      {
+        title: "Software Engineer (Freelance)",
+        company: "Ceemore Smart Luxury Estates",
+        meta: "Real Estate Platform",
+        period: "Jan 2026 - Mar 2026",
+        url: "https://ceemoresmartluxuryestates.com/",
+        description:
+          "Delivered a custom real estate platform with secure authentication, a role-based staff portal, and self-service content tools.",
+        highlights: [
+          "Built workflows for listings, property projects, client records, inquiries, support, follow-ups, analytics, and administration.",
+          "Engineered the platform with Next.js, TypeScript, Node.js, and PostgreSQL.",
+          "Managed production deployment to Microsoft Azure through GitHub Actions CI/CD.",
+        ],
+        stack: "Next.js, TypeScript, Node.js, PostgreSQL, Microsoft Azure, GitHub Actions",
+      },
+      {
+        title: "Frontend Developer (Freelance)",
+        company: "DVSongrl.com",
+        meta: "Oil Services Company",
+        period: "Jul 2026",
+        description:
+          "Designed and built a client-specific frontend, translating business requirements into a responsive production interface.",
+        highlights: [
+          "Handled frontend implementation, responsive quality, deployment preparation, and cloud delivery.",
+          "Completed the working project in under two weeks, meeting the client deadline within a one-month engagement.",
+        ],
+        stack: "Next.js, TypeScript, Tailwind CSS, responsive UI, cloud delivery",
+      },
     ],
-    footerLabel: "Focus",
-    stack: "Programming instruction, guided projects, code review, debugging support",
   },
   {
-    title: "Software Engineer (Freelance)",
-    company: "Ceemore Smart Luxury Estates",
-    meta: "Remote",
-    period: "Jan 2026 - Mar 2026",
-    url: "https://ceemoresmartluxuryestates.com/",
-    description:
-      "Led end-to-end delivery of a custom real estate platform, from requirements and architecture through production.",
-    highlights: [
-      "Built secure authentication and a role-based staff portal for analytics, listings, and administration.",
-      "Created workflows for property projects, client records, inquiries, support, and follow-ups.",
-      "Built scalable Node.js APIs and PostgreSQL models for high-traffic workloads.",
-      "Deployed to Microsoft Azure with GitHub Actions CI/CD and production release pipelines.",
+    title: "Additional experience",
+    experiences: [
+      {
+        title: "Full-Stack Developer",
+        company: "Gold Dust AI",
+        meta: "Consulting",
+        period: "2023 (6 months)",
+        description:
+          "Built a responsive Next.js and React website and connected business systems for consulting clients.",
+        highlights: [
+          "Integrated forms, CRM, analytics, and third-party services through REST APIs and webhooks.",
+          "Improved validation, logging, monitoring, SEO, accessibility, and error handling.",
+        ],
+        stack: "Next.js, React, REST APIs, webhooks, CRM, analytics, logging, monitoring",
+      },
+      {
+        title: "Coding Instructor & Community Mentor",
+        company: "ESINED Group and Coderzwave",
+        meta: "Technical Education",
+        period: "2022 - 2026",
+        url: "https://www.esinedgroup.com",
+        description:
+          "Delivered coding instruction and technical mentoring for learners at varied skill levels.",
+        highlights: [
+          "Designed guided projects and practical exercises.",
+          "Provided code reviews, debugging support, assignment feedback, and individualized mentoring.",
+        ],
+        footerLabel: "Focus",
+        stack: "Coding instruction, guided projects, code review, debugging support, mentoring",
+      },
     ],
-    stack: "Next.js, React, TypeScript, Node.js, PostgreSQL, Microsoft Azure, GitHub Actions",
-  },
-  {
->>>>>>> 7a99fe7fe7c9086dba4e4e48d3f2b044324d1e3b
-    title: "Technical Lead & Senior Full-Stack Engineer",
-    company: "HackrPost",
-    meta: "AI-Powered SaaS Platform",
-    period: "2025 - 2026",
-    url: "http://hackrpost.com/",
-    description:
-      "Led end-to-end architecture, team delivery, and production deployment for an AI-powered social-content automation platform built around autonomous and semi-autonomous AI agents.",
-    highlights: [
-      "Designed LangChain-based agent workflows that plan content, retrieve relevant context, generate and refine posts, and coordinate publishing actions through APIs and platform tooling.",
-      "Implemented RAG and semantic-retrieval patterns to ground social content in structured knowledge and campaign context, improving relevance and reducing unsupported outputs.",
-      "Integrated OpenAI and fine-tuned models with cleaned, structured, and validated training data; addressed dataset imbalance and biased outputs to improve consistency and relevance.",
-      "Built AI auto-posting and X scheduling workflows with OAuth, BullMQ, Redis, and multiple workers; deployed Docker workloads to Azure and GCP with CI/CD and automated tests.",
-    ],
-    stack: "LangChain, RAG, OpenAI, OAuth, BullMQ, Redis, Docker, Azure, GCP, CI/CD",
-  },
-  {
-    title: "AI & Software Engineer",
-    company: "AurifyAI",
-    meta: "EdTech Platform",
-    period: "2024 - 2025",
-    description:
-      "Designed LangChain-powered multi-stage AI and agentic workflows for study-content generation, quizzes, guided learning, and personalized learning support.",
-    highlights: [
-      "Built RAG pipelines using semantic retrieval, embeddings, and vector-store knowledge sources to ground generated learning materials in relevant educational content.",
-      "Integrated Gemini and Vertex AI on Google Cloud to support scalable inference, structured automation, and AI-powered educational experiences.",
-      "Built FastAPI services and asynchronous processing architecture for high-volume AI workloads, pairing JWT authentication and AWS S3 with Celery/Redis workflows.",
-      "Delivered text-to-speech and AI audio features and deployed Dockerized microservices with Kubernetes and CI/CD.",
-    ],
-    stack: "LangChain, RAG, FastAPI, Gemini, Vertex AI, GCP, AWS S3, Celery, Redis, Docker, Kubernetes, CI/CD",
-  },
-  {
-    title: "AI Integration Specialist & Engineer",
-    company: "Gold Dust AI",
-    meta: "Consulting",
-    period: "2023 (6 months)",
-    description:
-      "Led delivery of AI automation, LangChain-enabled agent workflows, LLM integration, and RAG solutions for consulting clients, translating business requirements into deployable technical systems.",
-    highlights: [
-      "Designed semantic-retrieval and knowledge-grounding workflows using embeddings and vector-store patterns, helping agents generate responses from relevant client information.",
-      "Integrated OpenAI and LLM APIs with forms, CRM platforms, analytics, and third-party services through REST APIs, webhooks, and tool integrations.",
-      "Strengthened client platforms with validation, logging, monitoring, SEO, and accessibility improvements.",
-    ],
-    stack: "LangChain, RAG, OpenAI, LLM APIs, embeddings, vector stores, REST APIs, webhooks, monitoring",
-  },
-  {
-    title: "AI Development",
-    company: "Inkwell",
-    meta: "Personal AI-Native Publishing Project",
-    period: "",
-    url: "https://useinkwell.vercel.app/",
-    description:
-      "Built a voice-led client discovery experience where an AI interviewer conducts a 10-15 minute realtime conversation, captures the transcript, and transforms client input into structured, source-grounded editorial insights.",
-    highlights: [
-      "Designed an agentic, human-in-the-loop content workflow from article intake to AI-generated briefs, outlines, talking points, interview questions, and contextual section drafts, with writers retaining editorial control.",
-      "Engineered an asynchronous FastAPI and PostgreSQL backend with OpenAI Realtime and Responses APIs plus provider-agnostic Gemini, Vertex AI, and OpenRouter generation paths.",
-      "Implemented typed schemas, transcript source validation, JWT authorization, prompt-injection safeguards, retries, timeouts, and token and latency observability.",
-    ],
-    stack: "FastAPI, PostgreSQL, OpenAI Realtime, OpenAI Responses API, Gemini, Vertex AI, OpenRouter, JWT",
-  },
-  {
-    title: "Software Engineer (Freelance)",
-    company: "Ceemore Smart Luxury Estates",
-    meta: "Real Estate Platform",
-    period: "Jan 2026 - Mar 2026",
-    url: "https://ceemoresmartluxuryestates.com/",
-    description:
-      "Led end-to-end delivery of a custom real-estate platform from requirements through production, including secure authentication and a role-based staff portal.",
-    highlights: [
-      "Built Node.js APIs and PostgreSQL models with Next.js, React, TypeScript, and Tailwind CSS.",
-      "Deployed to Azure through GitHub Actions CI/CD.",
-    ],
-    stack: "Next.js, React, TypeScript, Tailwind CSS, Node.js, PostgreSQL, Azure, GitHub Actions, CI/CD",
-  },
-  {
-    title: "Lead Frontend Engineer",
-    company: "PLPFactory",
-    meta: "Design Marketplace",
-    period: "2022 - 2024",
-    description:
-      "Led frontend engineering for a design marketplace serving 3,000+ users and visitors, delivering reusable React/Redux components and critical workflow tests.",
-    highlights: [
-      "Led planning, code reviews, and delivery coordination across product and backend teams.",
-    ],
-    stack: "React, Redux, reusable components, workflow testing, engineering leadership",
-  },
-  {
-    title: "Full-Stack Software Engineer & Business Systems",
-    company: "J.J Willmin",
-    meta: "Business Systems",
-    period: "Jan 2021 - Dec 2022",
-    url: "https://www.jjwillminmalls.com/",
-    description:
-      "Built business applications and CRM workflows for construction projects, client management, employee operations, and lead follow-up.",
-    highlights: [
-      "Engineered a load-balanced architecture supporting thousands of requests per minute and responsive React-based interfaces.",
-    ],
-    stack: "Business applications, CRM workflows, React, load-balanced architecture",
-  },
-  {
-    title: "Coding Instructor & Community Mentor",
-    company: "ESINED Group and Coderzwave",
-    meta: "Technical Education",
-    period: "2022 - 2026",
-    description:
-      "Delivered structured instruction, code reviews, debugging support, and technical mentoring for learners with varied skill levels.",
-    highlights: [],
-    footerLabel: "Focus",
-    stack: "Structured instruction, code review, debugging support, technical mentoring",
   },
 ];
 
 const education = [
   {
-    title: "International Diploma in Information Technology",
+    title: "OTHM Level 4 Diploma in Information Technology (EQF/MQF Level 5)",
+    institution: "European College of Innovation (ECI)",
+    location: "Malta",
+    status: "Expected Nov 2026",
+  },
+  {
+    title: "International Diploma in Information Technology (MQF Level 4)",
     institution: "Domain Academy",
     location: "Malta",
     status: "Completed",
@@ -266,7 +221,7 @@ const education = [
 const certifications = [
   { title: "Frontend Developer (React) Certificate", issuer: "HackerRank" },
   { title: "Software Engineer Certificate", issuer: "HackerRank" },
-  { title: "The Complete Full-Stack Web Development Bootcamp", issuer: "Udemy" },
+  { title: "Complete Full-Stack Web Development Bootcamp", issuer: "Udemy" },
 ];
 
 const projects = [
@@ -294,11 +249,11 @@ const projects = [
   },
   {
     title: "Inkwell",
-    eyebrow: "AI-Native Publishing Platform",
+    eyebrow: "AI Voice Interview Platform",
     url: "https://useinkwell.vercel.app/",
     description:
-      "Transforms ideas and strategic briefs into editorial plans, structured outlines, contextual talking points, and publication-ready long-form content through collaborative AI workflows.",
-    tags: ["Next.js", "Lexical", "FastAPI", "Vertex AI"],
+      "Runs secure guest voice interviews with invitation links, article context, live transcript capture, durable persistence, and source-linked AI insights.",
+    tags: ["Next.js", "OpenAI Realtime", "FastAPI", "PostgreSQL"],
   },
 ];
 
@@ -434,15 +389,15 @@ export default function Portfolio() {
               <div>
                 <div className="mb-6 inline-flex items-center gap-2 rounded-md border border-accent/20 px-3 py-2 text-sm font-semibold text-accent shadow-sm">
                   <Sparkles size={16} />
-                  Founder &amp; software engineer · AI integration · Full-stack development
+                  AI &amp; Full-Stack Software Engineer
                 </div>
                 <h1 className="max-w-4xl text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl">
                   I engineer intelligent products that are built to scale.
                 </h1>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-ink/70 dark:text-canvas/70">
-                  I&apos;m Jahswill Onuegbu, a software engineer and founder with 5+ years of experience building AI-native
-                  SaaS products, cloud-native platforms, and production-ready Web2 and Web3 solutions. I specialize in
-                  Python, JavaScript, AI agents, machine learning, LLM and blockchain integrations, and serverless systems.
+                  I&apos;m Jahswill Onuegbu, an AI and full-stack software engineer with 5+ years of experience progressing
+                  from frontend development into end-to-end product, backend, AI, and cloud engineering. I build responsive
+                  interfaces, secure APIs, AI-powered workflows, asynchronous services, and production deployments.
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a href="mailto:onuegbujahswill@gmail.com" className="inline-flex items-center justify-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-semibold text-canvas transition-colors hover:bg-accent/90">
@@ -480,7 +435,7 @@ export default function Portfolio() {
                       <p className="text-sm font-semibold uppercase text-ink/45 dark:text-canvas/45">Currently based in</p>
                       <p className="mt-1 text-2xl font-semibold">Malta</p>
                       <p className="mt-3 text-sm leading-6 text-ink/70 dark:text-canvas/70">
-                        Building production AI and cloud systems, while teaching the next generation of developers.
+                        Building production software across SaaS, EdTech, marketplaces, and business systems.
                       </p>
                       <div className="mt-5 flex gap-3">
                         {socialLinks.map(({ label, href, icon: Icon }) => (
@@ -493,7 +448,7 @@ export default function Portfolio() {
                   </div>
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-3">
-                  {[["5+", "Years"], ["3,000+", "Marketplace users"], ["3", "Cloud platforms"]].map(([value, label]) => (
+                  {[["5+", "Years"], ["10,000", "Marketplace visitors"], ["3", "Cloud platforms"]].map(([value, label]) => (
                     <div key={label} className="rounded-md border border-ink/10 p-4 shadow-sm dark:border-canvas/10">
                       <p className="text-2xl font-semibold">{value}</p>
                       <p className="mt-1 text-xs font-medium uppercase text-ink/55 dark:text-canvas/55">{label}</p>
@@ -511,74 +466,90 @@ export default function Portfolio() {
                 title="From product architecture to production."
                 description="Leadership and hands-on delivery across AI SaaS, cloud platforms, marketplaces, business systems, and technical education."
               />
-              <div className="grid gap-4">
-                {experiences.map((experience) => (
-                  <article key={`${experience.company}-${experience.period}`} className="rounded-md border border-ink/10 p-5 dark:border-canvas/10">
-                    <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-                      <div>
-                        <div className="flex flex-wrap items-center gap-2 text-sm text-ink/55 dark:text-canvas/55">
-                          {experience.period && <span>{experience.period}</span>}
-                          {experience.period && experience.meta && <span className="h-1 w-1 rounded-full bg-accent" />}
-                          <span>{experience.meta}</span>
-                        </div>
-                        <h3 className="mt-3 text-2xl font-semibold">{experience.title}</h3>
-                        {experience.url ? (
-                          <Link href={experience.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent/80">
-                            {experience.company}
-                            <ExternalLink size={15} />
-                          </Link>
-                        ) : <p className="mt-2 text-sm font-semibold text-accent">{experience.company}</p>}
-                        <p className="mt-4 text-sm leading-6 text-ink/70 dark:text-canvas/70">{experience.description}</p>
-                      </div>
-                      <div>
-                        {experience.highlights.length > 0 && (
-                          <div className="grid gap-2 sm:grid-cols-2">
-                            {experience.highlights.map((highlight) => (
-                              <div key={highlight} className="flex gap-2 text-sm leading-6 text-ink/75 dark:text-canvas/75">
-                                <ChevronRight size={16} className="mt-1 shrink-0 text-accent" />
-                                <span>{highlight}</span>
+              <div className="grid gap-10">
+                {experienceGroups.map((group) => (
+                  <div key={group.title}>
+                    <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-accent">{group.title}</h3>
+                    <div className="grid gap-4">
+                      {group.experiences.map((experience) => (
+                        <article key={`${experience.company}-${experience.period}`} className="rounded-md border border-ink/10 p-5 dark:border-canvas/10">
+                          <div className="grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
+                            <div>
+                              <div className="flex flex-wrap items-center gap-2 text-sm text-ink/55 dark:text-canvas/55">
+                                {experience.period && <span>{experience.period}</span>}
+                                {experience.period && experience.meta && <span className="h-1 w-1 rounded-full bg-accent" />}
+                                <span>{experience.meta}</span>
                               </div>
-                            ))}
+                              {experience.url ? (
+                                <Link href={experience.url} target="_blank" rel="noopener noreferrer" className="mt-3 inline-flex items-center gap-2 text-2xl font-semibold hover:text-accent">
+                                  {experience.company}
+                                  <ExternalLink size={17} />
+                                </Link>
+                              ) : <h4 className="mt-3 text-2xl font-semibold">{experience.company}</h4>}
+                              {experience.roles ? (
+                                <div className="mt-4 grid gap-2">
+                                  {experience.roles.map((role) => (
+                                    <div key={`${role.title}-${role.period}`} className="flex flex-col gap-1 border-l-2 border-accent/40 pl-3 text-sm sm:flex-row sm:items-center sm:justify-between">
+                                      <span className="font-semibold">{role.title}</span>
+                                      <span className="text-ink/55 dark:text-canvas/55">{role.period}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              ) : <p className="mt-2 text-sm font-semibold text-accent">{experience.title}</p>}
+                              <p className="mt-4 text-sm leading-6 text-ink/70 dark:text-canvas/70">{experience.description}</p>
+                            </div>
+                            <div>
+                              {experience.highlights.length > 0 && (
+                                <div className="grid gap-2 sm:grid-cols-2">
+                                  {experience.highlights.map((highlight) => (
+                                    <div key={highlight} className="flex gap-2 text-sm leading-6 text-ink/75 dark:text-canvas/75">
+                                      <ChevronRight size={16} className="mt-1 shrink-0 text-accent" />
+                                      <span>{highlight}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              )}
+                              <p className="mt-5 rounded-md border border-ink/10 p-3 text-sm leading-6 text-ink/70 dark:border-canvas/10 dark:text-canvas/70">
+                                <span className="font-semibold text-ink dark:text-canvas">{experience.footerLabel || "Stack"}: </span>
+                                {experience.stack}
+                              </p>
+                            </div>
                           </div>
-                        )}
-                        <p className="mt-5 rounded-md border border-ink/10 p-3 text-sm leading-6 text-ink/70 dark:border-canvas/10 dark:text-canvas/70">
-                          <span className="font-semibold text-ink dark:text-canvas">{experience.footerLabel || "Stack"}: </span>
-                          {experience.stack}
-                        </p>
-                      </div>
+                        </article>
+                      ))}
                     </div>
-                  </article>
+                  </div>
                 ))}
               </div>
             </div>
           </section>
 
           <section id="skills" className="px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-            <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.72fr_1.28fr]">
               <div>
                 <p className="text-sm font-semibold uppercase text-accent">Technical range</p>
                 <h2 className="mt-2 text-4xl font-semibold">Systems thinking across the stack.</h2>
                 <p className="mt-4 text-base leading-7 text-ink/70 dark:text-canvas/70">
-                  Product engineering from low-level C and backend services to responsive interfaces, AI pipelines,
-                  cloud infrastructure, security, and test automation.
+                  Product engineering across responsive interfaces, secure backend systems, AI workflows, cloud delivery,
+                  and automated quality practices.
                 </p>
               </div>
-              <div className="grid gap-6">
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  {skills.map((skill) => (
-                    <div key={skill} className="rounded-md border border-ink/10 px-4 py-3 text-sm font-semibold text-ink/75 shadow-sm dark:border-canvas/10 dark:text-canvas/75">
-                      {skill}
+              <div className="grid gap-4 sm:grid-cols-2">
+                {skillGroups.map((group) => (
+                  <article key={group.title} className="rounded-md border border-ink/10 p-5 shadow-sm dark:border-canvas/10">
+                    <div className="flex items-center gap-2">
+                      <Code size={17} className="text-accent" />
+                      <h3 className="font-semibold">{group.title}</h3>
                     </div>
-                  ))}
-                </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  {competencies.map((competency) => (
-                    <div key={competency} className="flex items-start gap-3 rounded-md border border-ink/10 px-4 py-3 text-sm leading-6 text-ink/75 dark:border-canvas/10 dark:text-canvas/75">
-                      <Code size={16} className="mt-1 shrink-0 text-accent" />
-                      {competency}
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {group.skills.map((skill) => (
+                        <span key={skill} className="rounded-md border border-ink/10 px-2.5 py-1.5 text-xs font-medium text-ink/70 dark:border-canvas/10 dark:text-canvas/70">
+                          {skill}
+                        </span>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                  </article>
+                ))}
               </div>
             </div>
           </section>
